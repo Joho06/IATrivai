@@ -1,0 +1,10 @@
+Flask
+numpy
+tensorflow
+nltk
+google-auth
+google-cloud-speech
+google-cloud-texttospeech
+pydub
+spellchecker
+spacy

@@ -1,0 +1,28 @@
+#Crear un entorno donde ejecutar las dependencias
+py -m venv entornoMV
+
+
+cd entornoMV
+cd Scripts 
+activate 
+
+
+#Instalar pip 
+sudo apt install python3-pip
+pip install --upgrade pip
+
+
+#Instalar from google.cloud import speech
+pip install google-auth
+pip install google-cloud-speech
+pip install google-cloud-texttospeech
+
+#Instalacion del servidor 
+pip install Flask
+
+
+#instalar para transformar el audio
+pip install pydub
+
+#encender el servidor 
+py main.py

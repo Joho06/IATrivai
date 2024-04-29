@@ -1,0 +1,308 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": [
+        "Hi",
+        "Hola",
+        "Hola",
+        "¿Cómo estás?",
+        "hola",
+        "ola"
+      ],
+      "responses": [
+        "¡Hola! Bienvenido a Trivai. ¿Puedes ayudarme con tu nombre?"
+      ]
+    },
+    {
+      "tag": "despedida",
+      "patterns": [
+        "Adios",
+        "Hasta Luego",
+        "Nos vemos mas tarde"
+      ],
+      "responses": [
+        "¡Adiós! Que tengas un buen día.",
+        "¡Hasta luego!",
+        "¡Adiós! ¡Cuídate!",
+        "¡Adiós! ¡Vuelve pronto!",
+        "¡Adiós! No dudes en volver si necesitas ayuda."
+      ]
+    },
+    {
+      "tag": "agradeciento",
+      "patterns": [
+        "Gracias",
+        "Gracias",
+        "Se lo agradezco"
+      ],
+      "responses": [
+        "¡De nada!",
+        "¡No hay problema, feliz de ayudar!",
+        "¡En cualquier momento!",
+        "¡Me alegra poder ayudar!",
+        "¡De nada!"
+      ]
+    },
+    {
+      "tag": "edad",
+      "patterns": [
+        "que edad tienes?",
+        "cual es tu edad?"
+      ],
+      "responses": [
+        "Soy solo un programa de computadora, así que no tengo edad.",
+        "La edad es solo un número para mí.",
+        "No envejezco, solo me actualizo.",
+        "¡Soy atemporal!",
+        "Soy sin edad, como una pieza de software atemporal."
+      ]
+    },
+    {
+      "tag": "clima",
+      "patterns": [
+        "¿Cómo está el tiempo?",
+        "¿Cómo está el tiempo hoy?"
+      ],
+      "responses": [
+        "Puedes consultar el pronóstico del tiempo en línea o en tu teléfono.",
+        "No soy meteorólogo, pero puedes encontrar actualizaciones del clima en línea.",
+        "Me temo que no puedo proporcionar actualizaciones meteorológicas en tiempo real. ¡Prueba una aplicación meteorológica!",
+        "No tengo una función de pronóstico del tiempo, pero puedo ayudarte con otras consultas.",
+        "Las condiciones meteorológicas varían según la ubicación. Es posible que desees consultar un sitio web meteorológico."
+      ]
+    },
+    {
+      "tag": "chiste",
+      "patterns": [
+        "Cuéntame un chiste",
+        "¿Sabes algún chiste?"
+      ],
+      "responses": [
+        "¿Por qué los científicos no confían en los átomos? ¡Porque lo conforman todo!",
+        "¿Cómo llamas a la pasta falsa? ¡Un impostor!",
+        "¿Por qué el espantapájaros ganó un premio? ¡Porque era sobresaliente en su campo!",
+        "¿Por qué no podía mantenerse en pie la bicicleta por sí sola? ¡Estaba cansada!",
+        "¿Qué es naranja y suena como un loro? ¡Una zanahoria!"
+      ]
+    },
+    {
+      "tag": "identidad",
+      "patterns": [
+        "¿Quién eres?",
+        "¿Qué eres?",
+        "Háblame de ti",
+        "¿Cuál es tu propósito?",
+        "¿Quién te creó?"
+      ],
+      "responses": [
+        "Soy Trivai IA, un asistente virtual diseñado para ayudarte con tus preguntas y tareas.",
+        "Soy Trivai IA, un chatbot impulsado por IA programado para proporcionar asistencia e información.",
+        "Soy Trivai IA, tu amigable chatbot de vecindario aquí para ayudarte.",
+        "Soy Trivai IA, un asistente digital creado para hacerte la vida más fácil.",
+        "Soy Trivai IA, un agente conversacional diseñado para interactuar con los usuarios y proporcionar respuestas útiles."
+      ]
+    },
+    {
+      "tag": "tecnologia",
+      "patterns": [
+        "¿Con qué tecnología estás construido?",
+        "¿Cómo trabajas?",
+        "¿Cuál es tu tecnología subyacente?",
+        "¿En qué lenguaje de programación estás escrito?"
+      ],
+      "responses": [
+        "Estoy construido usando técnicas de procesamiento del lenguaje natural (NLP) y algoritmos de aprendizaje automático.",
+        "Utilizo inteligencia artificial (IA) para entender y responder a las consultas de los usuarios.",
+        "Mi tecnología subyacente incluye modelos de aprendizaje profundo y redes neuronales.",
+        "Estoy programado usando Python y utilizo bibliotecas como TensorFlow y NLTK.",
+        "Utilizo algoritmos avanzados para analizar datos de texto y generar respuestas."
+      ]
+    },
+    {
+      "tag": "capacidades",
+      "patterns": [
+        "¿Qué puedes hacer?",
+        "¿Cuáles son tus habilidades?",
+        "¿Qué tareas puedes realizar?",
+        "¿Cómo puedes ayudarme?"
+      ],
+      "responses": [
+        "Puedo proporcionar información sobre una amplia gama de temas, responder preguntas y ayudar con tareas.",
+        "Soy capaz de entender consultas en lenguaje natural y proporcionar respuestas relevantes.",
+        "Puedo ayudarte con tareas como encontrar información, hacer recomendaciones y brindar apoyo.",
+        "Estoy diseñado para ayudar a los usuarios proporcionando respuestas precisas y útiles a sus consultas.",
+        "Mis habilidades incluyen responder preguntas, hacer recomendaciones y ofrecer soporte."
+      ]
+    },
+    {
+      "tag": "Colombia",
+      "patterns": [
+        "informacion Colombia",
+        "ofertas Colombia",
+        "viajes a Colombia",
+        "Colombia"
+      ],
+      "responses": [
+        "CARTAGENA 3 NOCHES Ticket aéreo Guayaquil o Quito / Cartagena / Quito o Guayaquil Vía avianca\n\nINCLUYE:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 03 noches de alojamiento en HOTEL ZALMEDINA\n• Desayunos diarios\n• Cortesía:\n- City tour + Visita al Castillo de San Felipe con entrada.\n- Chip + bolsa de café por habitación\n• Impuestos hoteleros y aéreos\n$447",
+        "CARTAGENA 3 NOCHES TODO INLUIDO Ticket aéreo Guayaquil o Quito / Cartagena / Quito o Guayaquil Vía avianca\n\nINCLUYE:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 03 noches de alojamiento en HOTEL CARTAGENA PLAZA\n• Desayuno, almuerzo y cena tipo buffet\n• Snacks y bar abierto\n• Piscina panorámica\n• Bar & discoteca\n• Noches temáticas y shows de baile\n• Kids & teen clubs\n• Wifi gratuito en las instalaciones\n• CORTESÍAS:\n- City tour + Castillo de San Felipe con entrada\n- Chip celular y bolsa de café por habitación\n$565",
+        "CARTAGENA! ALL INCLUSIVE 04 NOCHES Ticket aéreo QUITO - GUAYAQUIL / CARTAGENA / GUAYAQUIL - QUITO\n\nINCLUYE:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 04 noches de alojamiento en HOTEL CARTAGENA PLAZA\n• Desayuno, almuerzo y cena tipo buffet\n• Snacks y bar abierto\n• Piscina panorámica\n• Bar & discoteca\n• Noches temáticas y shows de baile\n• Kids & teen clubs\n• Wifi gratuito en las instalaciones\n$829",
+        "CARTAGENA BÁSICO\n4 DÍAS / 3 NOCHES\nIncluye:\n• 03 noches de alojamiento de acuerdo con el hotel elegido.\n• Desayunos diarios.\n• Traslados in/out – Servicio privado en horario diurno. (Sin guía acompañante)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\n$217 DBL\n$192 TPL",
+        "MEDELLÍN BÁSICO\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• Traslado aeropuerto MDE – Hotel – aeropuerto MDE en servicio privado en horario diurno. (sin guía acompañante)\n• 03 noches de Alojamiento en hotel seleccionado\n• Desayunos Diarios\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\n$192 DBL\n$184 TPL",
+        "BOGOTÁ “CIUDAD DE CULTURA Y ARQUITECTURA”\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• 03 noches de alojamiento de acuerdo con el hotel seleccionado + desayuno incluido\n• Traslado in / out en servicio privado sin guía acompañante – aplica para horarios diurnos\n• Visita a la ciudad y sus lugares más emblemáticos con ascenso al cerro de Monserrate y entrada a Museo de Oro.\n• Visita a la catedral de sal en Zipaquirá\n• IVA e impuestos de Ecuador\nDESDE\n$386 DBL\n$349 TPL"
+        
+      ]
+    },
+    {
+      "tag": "Panama",
+      "patterns": [
+        "informacion Panama",
+        "ofertas Panama",
+        "viajes a Panama",
+        "Panama"
+      ],
+      "responses": [
+        "PANAMA CIUDAD Y PLAYA BLANCA\n6 DÍAS / 5 NOCHES\nPROGRAMA INCLUYE:\nTraslados aeropuerto PTY  hotel playa   hotel ciudad   aeropuerto en PTY en servicio compartido y en horario diurno.PANAMÁ CIUDAD:\n• 02 noches de Alojamiento en hotel The Executive u Hotel Hampton by Hilton + 01 noche GRATIS\n• Habitación Estándar.\n• Desayunos diarios\n• Día Completo - City Tour + Canal (sin entrada) + Compras (martes, jueves, sábado y domingo)\n• Día Completo- Full Day Zona Libre (sólo aplica lunes, miércoles y viernes)\n\nPANAMÁ PLAYA:\n• 02 noches de alojamiento en Hotel Playa Blanca\n• Habitación Garden View\n• Sistema de alimentación Todo Incluido.\n• Desayunos diarios\n• Impuestos Hoteleros \n• IVA en impuestos de Ecuador\n$432 DBL / $399 TPL",
+        "PANAMÁ DE COMPRAS\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• Traslados aeropuerto – hotel – aeropuerto en PTY en servicio compartido en horario diurno.\n• 02 noches de Alojamiento en hotel según elección + 01 noche GRATIS\n• Full Day City Tour + Canal (sin entradas) + Compras (martes, jueves, sábado y domingo)\n• CORTESÍA: Full Day Zona Libre (lunes, miércoles y viernes)\n• Desayunos diarios\n• Impuestos Hoteleros \n• IVA en impuestos de Ecuador\nHOTEL HOSPEDIUM PRINCESS\n$156 DBL\n$148 TPL"
+      ]
+    },
+    {
+      "tag": "Brasil",
+      "patterns": [
+        "informacion Brasil",
+        "ofertas Brasil",
+        "viajes a Brasil",
+        "Brasil"
+      ],
+      "responses": [
+        "SAO PAULO\n4 DÍAS / 3 NOCHES\nLand Tour\nPROGRAMA INCLUYE:\nTraslado aeropuerto GRU – hotel SAO – aeropuerto GRU en servicio privado.\n03 noches de alojamiento en hotel seleccionado con desayunos diarios incluidos\nHalf Day City Tour - servicio privado.\nSeguro de viaje ASSIST CARD por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\nImpuestos hoteleros\nIVA mayorista y de agencias\nDESDE\nSGL – $821\nDBL - $453",
+        "IGUAZÚ INOLVIDABLE\n4 DÍAS / 3 NOCHES\nLand Tour\nPROGRAMA INCLUYE:\nTraslado aeropuerto IGU/IGR – hotel – aeropuerto IGU/IGR en servicio compartido.\n03 noches de alojamiento en hotel seleccionado con desayunos diarios incluidos\n• Tour Cataratas Argentina (entrada incluida)\n• Tour Cataratas Brasil (entrada incluida)\n• Dutty Free Lado Argentina\n• Hito de las 3 Fronteras Brasil (sin entradas)\n• Parada en Parque de Aves (entrada incluida)\nSeguro de viaje ASSIST CARD por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\nImpuestos hoteleros\nIVA mayorista y de agencias\nDESDE\nDBL- $419\nTPL - $390",
+        "IGUAZÚ INOLVIDABLE\n4 DÍAS / 3 NOCHES\nLand Tour\nPROGRAMA INCLUYE:\nTraslado aeropuerto IGU/IGR – hotel – aeropuerto IGU/IGR en servicio compartido.\n03 noches de alojamiento en hotel seleccionado con desayunos diarios incluidos\n• Tour Cataratas Argentina (entrada incluida)\n• Tour Cataratas Brasil (entrada incluida)\n• Dutty Free Lado Argentina\n• Hito de las 3 Fronteras Brasil (sin entradas)\n• Parada en Parque de Aves (entrada incluida)\nSeguro de viaje ASSIST CARD por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\nImpuestos hoteleros\nIVA mayorista y de agencias\nDESDE\nDBL - $1018 \nTPL - $931"
+      ]
+    },
+    {
+      "tag": "Argentina",
+      "patterns": [
+        "informacion Argentina",
+        "ofertas Argentina",
+        "viajes a Argentina",
+        "Argentina"
+      ],
+      "responses": [
+        "BARILOCHE CLÁSICO\n3 DÍAS / 2 NOCHES\nPROGRAMA INCLUYE:\n• 02 noches de alojamiento en el hotel seleccionado.\n• Desayunos diarios.\n• Excursión Circuito Chico en servicio regular.\n• Traslado Apto – Hotel – Apto en servicio regular.\n• Seguro de asistencia Assist Card x 3 días (sólo aplica para ecuatorianos. Suplemento en seguro para mayores de 70 años)\n• Impuestos Hoteleros\nIVA e impuestos de Ecuador\nDESDE\nSGL – $257 - DBL/TPL - $236",
+        "BUENOS AIRES DE REGALO\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• 03 noches de alojamiento en el hotel seleccionado con desayuno e impuestos incluidos. \n• Traslados Aeropuerto/Hotel/Aeropuerto en servicio Semi-privado. \n• Excursión de medio día City tour en servicio regular (regreso al hotel por cuenta propia).  \n• Tour de Compras en fábricas de cuero, ropa, etc. (Cortesía) \n• Cortesía: Casino Puerto Madero: Entrada y traslado gratis brindado por el Casino para mayores de 18 años. \n• Cortesía: 10% de descuento por consumo a la carta en el Restaurant Puerto Cristal en Puerto Madero. \n• Seguro de viaje ASSIST CARD por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\n• Iva e Impuestos.\nDESDE\n$244 - DBL\n$236 – TPL",
+        "BUENOS AIRES + IGUAZÚ + MONTEVIDEO\n9 DÍAS / 8 NOCHES\nPROGRAMA INCLUYE:\n• 02 noches de alojamiento en Buenos Aires con desayuno.\n• Half Day City Tour en servicio regular.\n• Cena Show La Ventana.\n• Traslados en servicio privado.\n• Ticket de barco directo desde Buenos Aires hasta Montevideo en clase turista.\n• 02 noches de alojamiento en Puerto Iguazú con desayuno.\n• Cataratas Argentinas con entradas.\n• Cataratas Brasileras con entradas.\n• Traslados en servicio regular.\n• 01 noche de alojamiento en Buenos Aires con desayuno.\n• Traslados en servicio privado.\n• 02 noches de alojamiento en Montevideo con desayuno.\n• Half Day City tour.\n• Traslados en servicio Privado.\n• Ticket de barco directo desde Montevideo hasta Buenos Aires en clase turista\n• 01 noche de alojamiento en Buenos Aires con desayuno.\n• Traslados en servicio privado. \n• Seguro de asistencia Assist Card x 9 días (sólo aplica para ecuatorianos. Suplemento en seguro para mayores de 70 años)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\n$2,226 – DBL\n$1810 – TPL"
+      ]
+    },
+    {
+      "tag": "public",
+      "patterns": [
+        "publicación",
+        "mandar las opciones",
+        "Gracias"
+      ],
+      "responses": [
+        "Para poder ayudarte necesitamos saber la siguiente información\nNombre:\nCorreo electrónico:\nDestino:\nFecha tentativa:\nCuantas personas viajan:\nEdades:\nSalida de Quito o Guayaquil:"
+      ]
+    },
+    {
+      "tag": "Fechas",
+      "patterns": [
+        "¿Cuándo está disponible el paquete?",
+        "¿Qué fechas tienen disponibles?",
+        "¿Hay alguna fecha específica?"
+      ],
+      "responses": [
+        "Los paquetes están disponibles durante todo el año. ¿Tienes alguna fecha específica en mente?"
+      ]
+    },
+    {
+      "tag": "lugares_interes",
+      "patterns": [
+        "¿Qué lugares de interés recomiendas en ?",
+        "¿Cuáles son los mejores lugares para visitar en ?",
+        "¿Qué actividades turísticas son populares en ?"
+      ],
+      "responses": [
+        "En , algunos lugares de interés populares incluyen .",
+        "Recomendamos visitar  y  en.",
+        "Las actividades turísticas más populares en incluyen ,  y ."
+      ]
+    },
+    {
+      "tag": "alojamiento",
+      "patterns": [
+        "¿Qué opciones de alojamiento hay en ?",
+        "¿Puedes recomendarme un hotel en ?",
+        "Estoy buscando un lugar para hospedarme en ."
+      ],
+      "responses": [
+        "En , hay una variedad de opciones de alojamiento que van desde hoteles de lujo hasta hostales económicos.",
+        "Te recomendamos el hotel en . Tiene excelentes reseñas y comodidades.",
+        "¿Prefieres un hotel con vista al mar o en el centro de la ciudad?"
+      ]
+    },
+    {
+      "tag": "transporte",
+      "patterns": [
+        "¿Cómo puedo moverme por ?",
+        "¿Qué opciones de transporte público hay en ?",
+        "¿Es fácil conseguir taxis en ?"
+      ],
+      "responses": [
+        "En , puedes moverte en transporte público como autobuses y metro, o puedes alquilar un coche si prefieres mayor autonomía.",
+        "El transporte público en  es seguro y conveniente. También hay servicios de taxi disponibles.",
+        "¿Necesitas ayuda para organizar traslados desde el aeropuerto?"
+      ]
+    },
+    {
+      "tag": "comida_restaurantes",
+      "patterns": [
+        "¿Cuáles son los platos típicos de ?",
+        "¿Puedes recomendarme un buen restaurante en ?",
+        "Estoy interesado en probar la gastronomía local en ."
+      ],
+      "responses": [
+        "Algunos platos típicos de  incluyen .",
+        "Te recomendamos el restaurante  en . Es conocido por su excelente cocina local.",
+        "La gastronomía en  es diversa y deliciosa. ¿Tienes alguna preferencia alimentaria?"
+      ]
+    },
+    {
+      "tag": "Hoteles",
+      "patterns": [
+        ""
+      ],
+      "responses": [
+        ""
+      ]
+    },
+    {
+      "tag": "respuestasQori",
+      "patterns": [
+        ""
+      ],
+      "responses": [
+        ""
+      ]
+    },
+    {
+      "tag": "",
+      "patterns": [
+        ""
+      ],
+      "responses": [
+        ""
+      ]
+    },
+    {
+      "tag": "s",
+      "patterns": [
+        ""
+      ],
+      "responses": [
+        ""
+      ]
+    }
+  ]
+}
