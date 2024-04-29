@@ -178,6 +178,7 @@ def audioText():
         return transcript, 200
     else:
         return "No se encontraron resultados de transcripción", 400
+
 @app.route("/audioToText", methods=["POST"])  
 def devolver_audio():
     # Obtener el texto del cuerpo de la solicitud POST
