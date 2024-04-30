@@ -182,9 +182,9 @@ def audioText():
 def devolver_audio():
     # Obtener el texto del cuerpo de la solicitud POST
     texto = request.form.get('texto', '')  # Acceder al texto enviado desde PHP
-    client_file = "sa_key_demo.json"
-    credentials = service_account.Credentials.from_service_account_file(client_file)
-    client = texttospeech.TextToSpeechClient(credentials=credentials)
+    #client_file = "sa_key_demo.json"
+    #credentials = service_account.Credentials.from_service_account_file(client_file)
+    #client = texttospeech.TextToSpeechClient(credentials=credentials)
     synthesis_input = texttospeech.SynthesisInput(text=texto)
     voice = texttospeech.VoiceSelectionParams(
         language_code="es-US",
@@ -195,12 +195,12 @@ def devolver_audio():
         audio_encoding=texttospeech.AudioEncoding.MP3
     )
 
-    response = client.synthesize_speech(
-        input=synthesis_input, voice=voice, audio_config=audio_config
-    )
+    #response = client.synthesize_speech(
+     #   input=synthesis_input, voice=voice, audio_config=audio_config
+    #)
 
     print(texto)
-    return Response(response.audio_content, mimetype='audio/mpeg')
+    #return Response(response.audio_content, mimetype='audio/mpeg')
 
 def convert_ogg_to_wav():
     song = AudioSegment.from_ogg("temp_audio_file.ogg").set_sample_width(2)
