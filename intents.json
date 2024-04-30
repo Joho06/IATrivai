@@ -303,6 +303,63 @@
       "responses": [
         ""
       ]
+    }, 
+    {
+      "tag": "hora",
+      "patterns": ["¿Qué hora es?"],
+      "responses": [
+        "Es hora de ir de viaje, ¿a donde te gustaria ir?"
+      ] 
+    },
+    {
+      "tag": "comida",
+      "patterns": ["¿Qué opciones de comida hay en cierto destino?", "¿Qué tipo de comida es típica en cierto lugar?"],
+      "responses": [
+        "Tenemos una variedad de opciones de comida en nuestros destinos, desde comida típica hasta opciones internacionales. ¿Qué tipo de comida estás buscando?",
+        "Cada destino tiene su propia cocina única y deliciosa. ¿Qué tipo de comida te gustaría probar en tu viaje?"
+      ]
+    },
+    {
+      "tag": "alojamiento",
+      "patterns": ["opciones de alojamiento ofrecen?", "¿tipo de habitaciones tienen?", "¿cuesta el alojamiento?"],
+      "responses": [
+        "Ofrecemos una variedad de opciones de alojamiento, desde hoteles de lujo hasta apartamentos y villas. ¿Qué tipo de alojamiento estás buscando?",
+        "Nuestros alojamientos ofrecen comodidades y servicios de alta calidad. ¿Qué características estás buscando en tu alojamiento?",
+        "Los precios de nuestros alojamientos varían según la ubicación y las comodidades. ¿Cuál es tu presupuesto para el alojamiento?"
+      ]
+    },
+    {
+      "tag": "confirmacion",
+      "patterns": ["Estoy interesado"],
+      "responses": [
+        "para poder ayudarte necesitamos saber la siguiente información\nNombre:\nCorreo electrónico:\nDestino:\nFecha tentativa:\nCuantas personas viajan:\nEdades: \nSalida de Quito o Guayaquil:"
+      ]
+    },
+    {
+      "tag": "datos_enviados",
+      "patterns": ["Quito","Guayaquil","@",".com"],
+      "responses": [
+        "Correcto registrare tus datos"
+      ]
+    },
+    {
+      "tag": "reserva",
+      "patterns": ["¿Quiero reservar un vuelo?"],
+      "responses": [
+        "¡Por supuesto! ¿Podrías proporcionarme detalles sobre tu viaje? Por ejemplo, ¿a dónde quieres ir y cuándo?"
+      ]
+    },
+    {
+      "tag": "informacion_vuelos",
+      "patterns": ["información sobre vuelos"],
+      "responses": [
+        "¡Por supuesto! ¿Podrías proporcionarme detalles sobre tu viaje? Por ejemplo, ¿a dónde quieres ir y cuándo?"
+      ]
+    },
+    {
+      "tag": "no_entendido",
+      "patterns": ["No entiendo", "No comprendo", "¿Puedes repetir?"],
+      "responses": ["Lo siento, ¿puedes reformular tu pregunta?"]
     }
   ]
 }

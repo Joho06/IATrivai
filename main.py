@@ -6,7 +6,6 @@ import nltk
 import numpy as np
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
-from spellchecker import SpellChecker
 from flask import Flask, request, Response 
 from google.cloud import speech
 from google.oauth2 import service_account
