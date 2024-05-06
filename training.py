@@ -12,14 +12,15 @@ lemmatizer = WordNetLemmatizer()
 
 # Cargar datos de intenciones desde el archivo JSON
 with open('intents.json', 'r', encoding='utf-8') as file:
-    intents = json.load(file)
+    intents_json = json.load(file)
 
 words = []
 classes = []
 documents = []
 ignore_letters = ['?', '!', '.', ',']
 
-for intent in intents['intents']:
+# Procesar datos del archivo JSON
+for intent in intents_json['intents']:
     for pattern in intent['patterns']:
         word_list = nltk.word_tokenize(pattern)
         words.extend(word_list)
@@ -28,9 +29,9 @@ for intent in intents['intents']:
         if intent['tag'] not in classes:
             classes.append(intent['tag'])
 
+# Procesar palabras
 words = [lemmatizer.lemmatize(word.lower()) for word in words if word not in ignore_letters]
 words = sorted(set(words))
-classes = sorted(set(classes))
 
 # Guardar palabras y clases en archivos pkl
 pickle.dump(words, open('words.pkl', 'wb'))

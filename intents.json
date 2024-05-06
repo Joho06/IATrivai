@@ -37,11 +37,9 @@
         "Se lo agradezco"
       ],
       "responses": [
-        "¡De nada!",
-        "¡No hay problema, feliz de ayudar!",
+        "No hay problema, cualquer otra pregunta no dudes en hacerla.",
         "¡En cualquier momento!",
-        "¡Me alegra poder ayudar!",
-        "¡De nada!"
+        "¡Me alegra poder ayudar!"
       ]
     },
     {
@@ -135,6 +133,236 @@
         "Mis habilidades incluyen responder preguntas, hacer recomendaciones y ofrecer soporte."
       ]
     },
+    
+    {
+      "tag": "Fechas",
+      "patterns": [
+        "¿Cuándo está disponible el paquete?",
+        "¿Qué fechas tienen disponibles?",
+        "¿Hay alguna fecha específica?"
+      ],
+      "responses": [
+        "Los paquetes están disponibles durante todo el año. ¿Tienes alguna fecha específica en mente?"
+      ]
+    },
+    {
+      "tag": "lugares_interes",
+      "patterns": [
+        "¿Qué lugares de interés recomiendas en ?",
+        "¿Cuáles son los mejores lugares para visitar en ?",
+        "¿Qué actividades turísticas son populares en ?"
+      ],
+      "responses": [
+        "En , algunos lugares de interés populares incluyen .",
+        "Recomendamos visitar  y  en.",
+        "Las actividades turísticas más populares en incluyen ,  y ."
+      ]
+    },
+    {
+      "tag": "alojamiento",
+      "patterns": [
+        "¿Qué opciones de alojamiento hay en ?",
+        "¿Puedes recomendarme un hotel en ?",
+        "Estoy buscando un lugar para hospedarme en ."
+      ],
+      "responses": [
+        "Hay una variedad de opciones de alojamiento que van desde hoteles de lujo hasta hostales económicos.",
+        "¿Prefieres un hotel con vista al mar o en el centro de la ciudad?"
+      ]
+    },
+    {
+      "tag": "transporte",
+      "patterns": [
+        "¿Cómo puedo moverme por ?",
+        "¿Qué opciones de transporte público hay en ?",
+        "¿Es fácil conseguir taxis en ?"
+      ],
+      "responses": [
+        "En , puedes moverte en transporte público como autobuses y metro, o puedes alquilar un coche si prefieres mayor autonomía.",
+        "El transporte público en  es seguro y conveniente. También hay servicios de taxi disponibles.",
+        "¿Necesitas ayuda para organizar traslados desde el aeropuerto?"
+      ]
+    },
+    {
+      "tag": "comida_restaurantes",
+      "patterns": [
+        "¿Cuáles son los platos típicos de ?",
+        "¿Puedes recomendarme un buen restaurante en ?",
+        "Estoy interesado en probar la gastronomía local en ."
+      ],
+      "responses": [
+        "Algunos platos típicos de  incluyen .",
+        "Te recomendamos el restaurante  en . Es conocido por su excelente cocina local.",
+        "La gastronomía en  es diversa y deliciosa. ¿Tienes alguna preferencia alimentaria?"
+      ]
+    },
+    {
+      "tag": "hora",
+      "patterns": [
+        "¿Qué hora es?"
+      ],
+      "responses": [
+        "Es hora de ir de viaje, ¿a donde te gustaria ir?"
+      ]
+    },
+    {
+      "tag": "comida",
+      "patterns": [
+        "¿Qué opciones de comida hay en cierto destino?",
+        "¿Qué tipo de comida es típica en cierto lugar?"
+      ],
+      "responses": [
+        "Tenemos una variedad de opciones de comida en nuestros destinos, desde comida típica hasta opciones internacionales. ¿Qué tipo de comida estás buscando?",
+        "Cada destino tiene su propia cocina única y deliciosa. ¿Qué tipo de comida te gustaría probar en tu viaje?"
+      ]
+    },
+    {
+      "tag": "alojamiento",
+      "patterns": [
+        "opciones de alojamiento ofrecen?",
+        "¿tipo de habitaciones tienen?",
+        "¿cuesta el alojamiento?"
+      ],
+      "responses": [
+        "Ofrecemos una variedad de opciones de alojamiento, desde hoteles de lujo hasta apartamentos y villas. ¿Qué tipo de alojamiento estás buscando?",
+        "Nuestros alojamientos ofrecen comodidades y servicios de alta calidad. ¿Qué características estás buscando en tu alojamiento?",
+        "Los precios de nuestros alojamientos varían según la ubicación y las comodidades. ¿Cuál es tu presupuesto para el alojamiento?"
+      ]
+    },
+  
+    {
+      "tag": "datos_enviados",
+      "patterns": [
+        "Quito",
+        "Guayaquil",
+        "@",
+        ".com"
+      ],
+      "responses": [
+        "Correcto registrare tus datos"
+      ]
+    },
+    {
+      "tag": "reserva",
+      "patterns": [
+        "¿Quiero reservar un vuelo?"
+      ],
+      "responses": [
+        "¡Por supuesto! ¿Podrías proporcionarme detalles sobre tu viaje? Por ejemplo, ¿a dónde quieres ir y cuándo?"
+      ]
+    },
+    {
+      "tag": "informacion_vuelos",
+      "patterns": [
+        "información sobre vuelos"
+      ],
+      "responses": [
+        "¡Por supuesto! ¿Podrías proporcionarme detalles sobre tu viaje? Por ejemplo, ¿a dónde quieres ir y cuándo?"
+      ]
+    },
+    {
+      "tag": "no_entendido",
+      "patterns": [
+        "No entiendo",
+        "No comprendo",
+        "¿Puedes repetir?"
+      ],
+      "responses": [
+        "Lo siento, ¿puedes reformular tu pregunta?"
+      ]
+    },
+    {
+      "tag": "alojamiento",
+      "patterns": [
+        "opciones de alojamiento ofrecen?",
+        "¿tipo de habitaciones tienen?",
+        "¿cuesta el alojamiento?"
+      ],
+      "responses": [
+        "Ofrecemos una variedad de opciones de alojamiento, desde hoteles de lujo hasta apartamentos y villas. ¿Qué tipo de alojamiento estás buscando?",
+        "Nuestros alojamientos ofrecen comodidades y servicios de alta calidad. ¿Qué características estás buscando en tu alojamiento?",
+        "Los precios de nuestros alojamientos varían según la ubicación y las comodidades. ¿Cuál es tu presupuesto para el alojamiento?"
+      ]
+    },
+    {
+      "tag": "confirmacion",
+      "patterns": [
+        "Estoy interesado"
+      ],
+      "responses": [
+        "Para poder ayudarte necesitamos saber la siguiente información:"
+      ]
+    },
+    {
+      "tag": "datos_enviados",
+      "patterns": [
+        "Quito",
+        "Guayaquil",
+        "@",
+        ".com"
+      ],
+      "responses": [
+        "Correcto registrare tus datos"
+      ]
+    },
+    {
+      "tag": "informacion_vuelos",
+      "patterns": [
+        "información sobre vuelos"
+      ],
+      "responses": [
+        "¡Por supuesto! ¿Podrías proporcionarme detalles sobre tu viaje? Por ejemplo, ¿a dónde quieres ir y cuándo?"
+      ]
+    },
+    {
+      "tag": "agendar_viaje",
+      "patterns": [
+        "¿agendar un viaje?",
+        "Quisiera agendar un viaje",
+        "a ver, agendame un viaje",
+        "reservar"
+      ],
+      "responses": [
+        "¡Perfecto! ¿A dónde te gustaria ir?"
+      ]
+    },
+    {
+      "tag": "querer_informacion",
+      "patterns": [
+        "necesito información",
+        "quiero información",
+        " hola que tal necesito información"
+      ],
+      "responses": [
+        "Claro, puedo proporcionarte información detallada sobre cualquier destino que te interese. ¿Hay algún lugar en particular del que te gustaría saber más?"
+      ]
+    },
+    {
+      "tag": "confirmacion",
+      "patterns": [
+        "Sí",
+        "sí, por favor",
+        "Claro"
+      ],
+      "responses": [
+        "Entendido",
+        "¡Perfecto!",
+        "Procesando la solicitud..."
+      ]
+    },
+    {
+      "tag": " negacion",
+      "patterns": [
+        "No",
+        "no, gracias",
+        "Nada"
+      ],
+      "responses": [
+        "De acuerdo",
+        "Entendido",
+        "¿Hay algo más en lo que pueda ayudarte?"
+      ]
+    },
     {
       "tag": "Colombia",
       "patterns": [
@@ -150,16 +378,15 @@
         "CARTAGENA BÁSICO\n4 DÍAS / 3 NOCHES\nIncluye:\n• 03 noches de alojamiento de acuerdo con el hotel elegido.\n• Desayunos diarios.\n• Traslados in/out – Servicio privado en horario diurno. (Sin guía acompañante)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\n$217 DBL\n$192 TPL",
         "MEDELLÍN BÁSICO\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• Traslado aeropuerto MDE – Hotel – aeropuerto MDE en servicio privado en horario diurno. (sin guía acompañante)\n• 03 noches de Alojamiento en hotel seleccionado\n• Desayunos Diarios\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\n$192 DBL\n$184 TPL",
         "BOGOTÁ “CIUDAD DE CULTURA Y ARQUITECTURA”\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• 03 noches de alojamiento de acuerdo con el hotel seleccionado + desayuno incluido\n• Traslado in / out en servicio privado sin guía acompañante – aplica para horarios diurnos\n• Visita a la ciudad y sus lugares más emblemáticos con ascenso al cerro de Monserrate y entrada a Museo de Oro.\n• Visita a la catedral de sal en Zipaquirá\n• IVA e impuestos de Ecuador\nDESDE\n$386 DBL\n$349 TPL"
-        
       ]
     },
     {
-      "tag": "Panama",
+      "tag": "Panamá",
       "patterns": [
-        "informacion Panama",
-        "ofertas Panama",
-        "viajes a Panama",
-        "Panama"
+        "informacion Panamá",
+        "ofertas Panamá",
+        "viajes a Panamá",
+        "Panamá"
       ],
       "responses": [
         "PANAMA CIUDAD Y PLAYA BLANCA\n6 DÍAS / 5 NOCHES\nPROGRAMA INCLUYE:\nTraslados aeropuerto PTY  hotel playa   hotel ciudad   aeropuerto en PTY en servicio compartido y en horario diurno.PANAMÁ CIUDAD:\n• 02 noches de Alojamiento en hotel The Executive u Hotel Hampton by Hilton + 01 noche GRATIS\n• Habitación Estándar.\n• Desayunos diarios\n• Día Completo - City Tour + Canal (sin entrada) + Compras (martes, jueves, sábado y domingo)\n• Día Completo- Full Day Zona Libre (sólo aplica lunes, miércoles y viernes)\n\nPANAMÁ PLAYA:\n• 02 noches de alojamiento en Hotel Playa Blanca\n• Habitación Garden View\n• Sistema de alimentación Todo Incluido.\n• Desayunos diarios\n• Impuestos Hoteleros \n• IVA en impuestos de Ecuador\n$432 DBL / $399 TPL",
@@ -195,171 +422,55 @@
       ]
     },
     {
-      "tag": "public",
+      "tag": "Caribe",
       "patterns": [
-        "publicación",
-        "mandar las opciones",
-        "Gracias"
+        "informacion Caribe",
+        "ofertas Caribe",
+        "viajes al Caribe",
+        "Caribe"
       ],
       "responses": [
-        "Para poder ayudarte necesitamos saber la siguiente información\nNombre:\nCorreo electrónico:\nDestino:\nFecha tentativa:\nCuantas personas viajan:\nEdades:\nSalida de Quito o Guayaquil:"
+        "BARCELÓ ARUBA\n4 DÍAS / 3 NOCHES\nLand Tour\nPROGRAMA INCLUYE:\n• Traslado aeropuerto AUA – Hotel – aeropuerto AUA en servicio compartido.\n• 03 noches de Alojamiento en el hotel BARCELÓ ARUBA\n• Régimen Todo incluido\n• Habitación Deluxe Room\n• Wi-fi gratis en todo el hotel\n• Participación en actividades y entretenimiento del hotel\n• Seguro de asistencia Assist Card x 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\nSGL: $1822\nDBL: $1472\nTPL: $1379",
+        "BRICKELL BAY BEACH RESORT ARUBA SÓLO ADULTOS.\n4 DÍAS / 3 NOCHES\nIncluye:\n• 03 noches de alojamiento en el Hotel Brickell Bay Beach Resort Aruba, Trademark by Wyndham.\n• Desayunos Diarios.\n• Traslado Aeropuerto AUA – Hotel - Traslado Aeropuerto AUA en servicio compartido.\n• Habitación Premium.\n• Seguro de asistencia Assist Card x 4 días (sólo aplica para pasajeros ecuatoriano. Suplemento en seguro para mayores de 70 años)\n• Impuesto ambiental.\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\nSGL: $765\nDBL: $402",
+        "EAGLE ARUBA RESORT\n4 DÍAS / 3 NOCHES\nIncluye:\n• 03 noches de alojamiento en el Hotel Eagle Aruba Resort.\n• Traslado Aeropuerto AUA – Hotel – Traslado Aeropuerto AUA en servicio compartido.\n• Habitación Suite Premium de un dormitorio.\n• Seguro de asistencia Assist Card x 4 días (sólo aplica para pasajeros ecuatoriano. Suplemento en seguro para mayores de 70 años).\nImpuestos Hoteleros.\n• IVA e impuestos de Ecuador.\n• CORTESÍA: \n• $25 dólares de crédito en comida y bebida consumida por habitación (no por pasajero).\n• Wi – Fi.\n• Sillas y sombrilla de playa y piscinas.\n• Estacionamiento.\n• Acceso al gimnasio.\n• Acceso a las canchas de Tennis de playa.\nDESDE\nSGL: $824 \nDBL: $449\nTPL:$358\n**PROMOCIÓN: Cuarta persona se hospeda GRATIS, se debe adicionar los traslados + seguros de viajes y si quiere incluir plan de comida debe pagar. Por favor ver la tarifa en la tabla de precios."
       ]
     },
     {
-      "tag": "Fechas",
+      "tag": "Bahamas",
       "patterns": [
-        "¿Cuándo está disponible el paquete?",
-        "¿Qué fechas tienen disponibles?",
-        "¿Hay alguna fecha específica?"
+        "informacion Bahamas",
+        "ofertas Bahamas",
+        "viajes a Bahamas",
+        "Bahamas"
       ],
       "responses": [
-        "Los paquetes están disponibles durante todo el año. ¿Tienes alguna fecha específica en mente?"
+        "RIU PALACE PARADISE ISLAND\nSólo Adultos\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• Traslado aeropuerto NAS – Hotel – aeropuerto NAS en servicio compartido.\n• 03 noches de Alojamiento en el hotel RIU PALACE PARADISE ISLAND\n• Sistema de alimentación todo incluido\n• Habitación Junior Suite Vista Mar Parcial \n• Participación en actividades y entretenimiento del hotel\t\n• Seguro de asistencia Assist Card por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\n• Impuestos Hoteleros \n• IVA e impuestos de Ecuador\nDESDE\nSGL: $1222\nDBL: $866\nTPL: $828"
       ]
     },
     {
-      "tag": "lugares_interes",
+      "tag": "Cuba",
       "patterns": [
-        "¿Qué lugares de interés recomiendas en ?",
-        "¿Cuáles son los mejores lugares para visitar en ?",
-        "¿Qué actividades turísticas son populares en ?"
+        "informacion Cuba",
+        "ofertas Cuba",
+        "viajes a Cuba",
+        "Cuba"
       ],
       "responses": [
-        "En , algunos lugares de interés populares incluyen .",
-        "Recomendamos visitar  y  en.",
-        "Las actividades turísticas más populares en incluyen ,  y ."
+        "HABANA Y VARADERO\n5 DÍAS / 4 NOCHES\nPROGRAMA INCLUYE: \n• Traslado en bus compartido, Aeropuerto La Habana – Hotel\n• Dos noches Hotel en La Habana con desayuno incluido\n• Excursión “Mi Habana Colonial” en bus compartido:\n• 4 horas de excursión, bus compartido, no incluye almuerzo.\nRecogida en el hotel, vehículo climatizado y guía. Recorrido panorámico Malecón. Recorrido a pie por el Centro Histórico de la Habana Vieja Patrimonio de La Humanidad, Plaza San Francisco de Asís, Plaza Vieja, Plaza de La Catedral, Plaza de Armas. En el trayecto hacia el Capitolio, se observan el Museo de la Revolución, el Museo de Bellas Artes, Parque Central y el Gran Teatro de la Habana. Recorrido con vista panorámica de la Universidad de La Habana y parada en la Plaza de la Revolución con tiempo para fotos. Retorno a los hoteles.\n• Traslado en bus compartido La Habana – Hotel en Varadero\n• Dos noches Hotel en Varadero servicio Todo Incluido\n(Desayunos, almuerzos y cenas tipo buffet, más snacks / Bebidas Soft y Alcohólicas ilimitadas / Restaurantes Especializados / Piscinas / Club Infantil y de niños / Servicio de toallas de playa / Actividades diarias / Entretenimiento nocturno con variados espectáculos)\n• Traslado en bus compartido Varadero – Aeropuerto La Habana \n• Asistencia 24 horas de la Agencia/\n• Seguro de asistencia Assist Card x 5 días (sólo aplica para pasajeros ecuatorianos. Suplemento para mayores de 70 años)\n• Asistencia 24 horas\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\nSGL: $428\nDBL: $336\nTPL:$333"
       ]
     },
     {
-      "tag": "alojamiento",
+      "tag": "Peru",
       "patterns": [
-        "¿Qué opciones de alojamiento hay en ?",
-        "¿Puedes recomendarme un hotel en ?",
-        "Estoy buscando un lugar para hospedarme en ."
+        "informacion Peru",
+        "ofertas Peru",
+        "viajes a Peru",
+        "Peru"
       ],
       "responses": [
-        "En , hay una variedad de opciones de alojamiento que van desde hoteles de lujo hasta hostales económicos.",
-        "Te recomendamos el hotel en . Tiene excelentes reseñas y comodidades.",
-        "¿Prefieres un hotel con vista al mar o en el centro de la ciudad?"
+        "LIMA EXPRESS\n3 DÍAS / 2 NOCHES\nPROGRAMA INCLUYE:\n• Traslado aeropuerto LIM – Hotel – aeropuerto LIM \n• 02 noches de Alojamiento en LIMA\n• Desayunos diarios\n• Tour de medio día: Visita a la Ciudad convencional o Tour Express en bicicleta (tour a elegir)\n• Transporte, entradas y guiado en servicio regular (español o inglés)\n• Seguro de asistencia Assist Card x 3 días (sólo aplica para pasajeros ecuatorianos. Suplemento para mayores de 70 años)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nSGL: $378\nDBL: $245\nTPL: $234",
+        "CUZCO AIRES ANDINOS\n4 DÍAS / 3 NOCHES\nIncluye:\n• Traslados aeropuerto/hotel/aeropuerto en Cusco. \n• 2 noches de alojamiento en Cusco (2 desayunos).\n• 1 noche de alojamiento en Valle Sagrado (1 desayuno).\n• Visita a la ciudad de Cusco & Parque Arqueológico de Sacsayhuamán.\n• Tour Día Completo - Valle Sagrado de los Incas (almuerzo incluido).\n• Tour Día Completo - Machu Picchu en servicio de tren categoría estándar (almuerzo incluido).\n• Transporte, entradas y guiado en servicio regular (español o inglés).\n• Seguro de asistencia Assist Card x 4 días (sólo aplica para pasajeros ecuatorianos. Suplemento para mayores de 70 años)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nSGL: $917\nDBL: $744\nTPL: $713"
       ]
-    },
-    {
-      "tag": "transporte",
-      "patterns": [
-        "¿Cómo puedo moverme por ?",
-        "¿Qué opciones de transporte público hay en ?",
-        "¿Es fácil conseguir taxis en ?"
-      ],
-      "responses": [
-        "En , puedes moverte en transporte público como autobuses y metro, o puedes alquilar un coche si prefieres mayor autonomía.",
-        "El transporte público en  es seguro y conveniente. También hay servicios de taxi disponibles.",
-        "¿Necesitas ayuda para organizar traslados desde el aeropuerto?"
-      ]
-    },
-    {
-      "tag": "comida_restaurantes",
-      "patterns": [
-        "¿Cuáles son los platos típicos de ?",
-        "¿Puedes recomendarme un buen restaurante en ?",
-        "Estoy interesado en probar la gastronomía local en ."
-      ],
-      "responses": [
-        "Algunos platos típicos de  incluyen .",
-        "Te recomendamos el restaurante  en . Es conocido por su excelente cocina local.",
-        "La gastronomía en  es diversa y deliciosa. ¿Tienes alguna preferencia alimentaria?"
-      ]
-    },
-    {
-      "tag": "Hoteles",
-      "patterns": [
-        ""
-      ],
-      "responses": [
-        ""
-      ]
-    },
-    {
-      "tag": "respuestasQori",
-      "patterns": [
-        ""
-      ],
-      "responses": [
-        ""
-      ]
-    },
-    {
-      "tag": "",
-      "patterns": [
-        ""
-      ],
-      "responses": [
-        ""
-      ]
-    },
-    {
-      "tag": "s",
-      "patterns": [
-        ""
-      ],
-      "responses": [
-        ""
-      ]
-    }, 
-    {
-      "tag": "hora",
-      "patterns": ["¿Qué hora es?"],
-      "responses": [
-        "Es hora de ir de viaje, ¿a donde te gustaria ir?"
-      ] 
-    },
-    {
-      "tag": "comida",
-      "patterns": ["¿Qué opciones de comida hay en cierto destino?", "¿Qué tipo de comida es típica en cierto lugar?"],
-      "responses": [
-        "Tenemos una variedad de opciones de comida en nuestros destinos, desde comida típica hasta opciones internacionales. ¿Qué tipo de comida estás buscando?",
-        "Cada destino tiene su propia cocina única y deliciosa. ¿Qué tipo de comida te gustaría probar en tu viaje?"
-      ]
-    },
-    {
-      "tag": "alojamiento",
-      "patterns": ["opciones de alojamiento ofrecen?", "¿tipo de habitaciones tienen?", "¿cuesta el alojamiento?"],
-      "responses": [
-        "Ofrecemos una variedad de opciones de alojamiento, desde hoteles de lujo hasta apartamentos y villas. ¿Qué tipo de alojamiento estás buscando?",
-        "Nuestros alojamientos ofrecen comodidades y servicios de alta calidad. ¿Qué características estás buscando en tu alojamiento?",
-        "Los precios de nuestros alojamientos varían según la ubicación y las comodidades. ¿Cuál es tu presupuesto para el alojamiento?"
-      ]
-    },
-    {
-      "tag": "confirmacion",
-      "patterns": ["Estoy interesado"],
-      "responses": [
-        "para poder ayudarte necesitamos saber la siguiente información\nNombre:\nCorreo electrónico:\nDestino:\nFecha tentativa:\nCuantas personas viajan:\nEdades: \nSalida de Quito o Guayaquil:"
-      ]
-    },
-    {
-      "tag": "datos_enviados",
-      "patterns": ["Quito","Guayaquil","@",".com"],
-      "responses": [
-        "Correcto registrare tus datos"
-      ]
-    },
-    {
-      "tag": "reserva",
-      "patterns": ["¿Quiero reservar un vuelo?"],
-      "responses": [
-        "¡Por supuesto! ¿Podrías proporcionarme detalles sobre tu viaje? Por ejemplo, ¿a dónde quieres ir y cuándo?"
-      ]
-    },
-    {
-      "tag": "informacion_vuelos",
-      "patterns": ["información sobre vuelos"],
-      "responses": [
-        "¡Por supuesto! ¿Podrías proporcionarme detalles sobre tu viaje? Por ejemplo, ¿a dónde quieres ir y cuándo?"
-      ]
-    },
-    {
-      "tag": "no_entendido",
-      "patterns": ["No entiendo", "No comprendo", "¿Puedes repetir?"],
-      "responses": ["Lo siento, ¿puedes reformular tu pregunta?"]
     }
   ]
 }
