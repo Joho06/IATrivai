@@ -33,7 +33,6 @@
       "tag": "agradeciento",
       "patterns": [
         "Gracias",
-        "Gracias",
         "Se lo agradezco"
       ],
       "responses": [
@@ -133,7 +132,6 @@
         "Mis habilidades incluyen responder preguntas, hacer recomendaciones y ofrecer soporte."
       ]
     },
-    
     {
       "tag": "Fechas",
       "patterns": [
@@ -229,7 +227,6 @@
         "Los precios de nuestros alojamientos varían según la ubicación y las comodidades. ¿Cuál es tu presupuesto para el alojamiento?"
       ]
     },
-  
     {
       "tag": "datos_enviados",
       "patterns": [
@@ -351,6 +348,15 @@
       ]
     },
     {
+      "tag": "No_incluye",
+      "patterns": [
+        "no incluye"
+      ],
+      "responses": [
+        "NOTAS IMPORTANTES:\nNO INCLUYE BOLETOS AÉREOS\nTARIFAS COMISIONABLES AL 10% DE LA BASE COMISIONABLE\n* TARIFAS NO GARANTIZADAS SIN RESERVA CON PAGO, SUJETAS A CAMBIOS SIN PREVIO AVISO *\nPara reservar: hasta paro de ventas.\nPara viajar: hasta 15/DIC/24\nPrecios sujetos a cambio sin previo aviso.\nReservas sujetas a disponibilidad del hotel\nSuplemento para traslados nocturnos.\nSuplemento para pasajero viajando solo.\nEs indispensable validar disponibilidad de alojamiento, antes de realizar la venta del paquete para garantizar que sea la misma tarifa, ya que de lo contrario no será posible mantenerla.\nLos niños son considerados hasta los 10 años, en adelante pagan tarifa de acomodación triple.\nTarifas sujetas a cambios sin previo aviso, dependiendo disponibilidad de alojamiento, fechas de temporada, y/o eventos de ciudad.\nFechas en las que aplica suplementos:  en junio, julio, primera y segunda semana de octubre y de noviembre. Por favor consultar."
+      ]
+    },
+    {
       "tag": " negacion",
       "patterns": [
         "No",
@@ -361,6 +367,78 @@
         "De acuerdo",
         "Entendido",
         "¿Hay algo más en lo que pueda ayudarte?"
+      ]
+    },
+    {
+      "tag": "forma_pag",
+      "patterns": [
+        "metodo de pago",
+        "formas de pago",
+        "pago",
+        "informacion de pago"
+      ],
+      "responses": [
+        "Claro Para completar tu reserva, te ofrecemos varias opciones de pago. Puedes realizar una transferencia bancaria, pagar con tarjeta de crédito o utilizar otras plataformas de pago en línea. Por favor, avísanos cuál prefieres y te proporcionaremos los detalles necesarios para proceder."
+      ]
+    },
+    {
+      "tag": "credioto",
+      "patterns": [
+        "pago con tarjeta",
+        "pagar con tarjeta",
+        "tarjeta de crédito"
+      ],
+      "responses": [
+        "Claro para procesar el pago con tarjeta de crédito, necesitamos la siguiente información:\nNúmero de la tarjeta de crédito: \nFecha de vencimiento: \nCódigo de seguridad (CVV/CVC): \nNombre del titular de la tarjeta: \nDirección de facturación:"
+      ]
+    },
+    {
+      "tag": "debito",
+      "patterns": [
+        "tarjeta de debito"
+      ],
+      "responses": [
+        "Claro para procesar el pago con tarjeta de debito, necesitamos la siguiente información:\nNúmero de la tarjeta de debito: \nFecha de vencimiento: \nCódigo de seguridad (CVV/CVC): \nNombre del titular de la tarjeta: \nDirección de facturación:"
+      ]
+    },
+    {
+      "tag": "transferenica",
+      "patterns": [
+        "datos de cuenta bancaria",
+        "cuenta bancaria",
+        "información bancaria",
+        "transferencia"
+      ],
+      "responses": [
+        "Con gusto, los datos de la cuenta bancaria son:\nCuenta Corriente Banco Guayaquil\nCuenta N°: 0041291060\nNombre: Trivai S.A\nRUC: 1793198413001"
+      ]
+    },
+    {
+      "tag": "efectivo",
+      "patterns": [
+        "efectivo",
+        "abono"
+      ],
+      "responses": [
+        "No hay problema. Para realizar el pago, por favor acérquese a nuestras oficinas ubicadas en el centro comercial Galería Plaza, Local N7.  ¿A qué hora te gustaría agendar una cita? Estamos disponibles de lunes a viernes de 9 am a 6 pm . Por favor, avísenos su preferencia para coordinar la cita. ¡Gracias"
+      ]
+    },
+    {
+      "tag": "tiempo_reserva",
+      "patterns": [
+        "listo gracias"
+      ],
+      "responses": [
+        "• Para mantener esta reservación en firme se requiere el pago del abono de $100, NO REEMBOLSABLE en el caso de pasajeros individuales o grupos. Aplica hasta 31 días antes del viaje para individuales y 46 días para grupos.\n• El pago total de una reservación deberá ser realizada hasta 30 días antes de la salida. \n• Si una reservación ingresa 30 días antes de la salida, el pago total deberá estar realizado en 24 horas luego de haber sido realizada la misma. \n• Reservaciones que no tengan pago SE CANCELARÁN a las 24 HORAS. \n• En el caso de grupos de pasajeros el pago total se debe realizar 45 días antes de la salida, \n• Penalidad por cambio de nombre: USD $150 hasta 10 días antes de la salida en vuelo chárter \n• No se permite cambios de fecha o destino \n• Al momento de la facturación usted acepta estar de acuerdo con los servicios detallados y está de acuerdo con las penalidades descritas en esta liquidación de servicios sin excepción alguna."
+      ]
+    },
+    {
+      "tag": "dividir_Colombia",
+      "patterns": [
+        "listo gracias"
+      ],
+      "responses": [
+        "• Para mantener esta reservación en firme se requiere el pago del abono de $100, NO REEMBOLSABLE en el caso de pasajeros individuales o grupos. Aplica hasta 31 días antes del viaje para individuales y 46 días para grupos.\n• El pago total de una reservación deberá ser realizada hasta 30 días antes de la salida. \n• Si una reservación ingresa 30 días antes de la salida, el pago total deberá estar realizado en 24 horas luego de haber sido realizada la misma. \n• Reservaciones que no tengan pago SE CANCELARÁN a las 24 HORAS. \n• En el caso de grupos de pasajeros el pago total se debe realizar 45 días antes de la salida, \n• Penalidad por cambio de nombre: USD $150 hasta 10 días antes de la salida en vuelo chárter \n• No se permite cambios de fecha o destino \n• Al momento de la facturación usted acepta estar de acuerdo con los servicios detallados y está de acuerdo con las penalidades descritas en esta liquidación de servicios sin excepción alguna."
       ]
     },
     {

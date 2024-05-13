@@ -20,7 +20,7 @@ nlp = spacy.load('es_core_news_sm')
 # Initialize WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 confirming = False
-
+user_name = ''
 
     
 # Load intents data from JSON file
@@ -32,9 +32,8 @@ words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('IntellichatModel.h5')
 
+# Inicializar traductor
 translator = Translator()
-# Variable para almacenar el nombre del usuario
-user_name = ""
 
 # Functions for chatbot functionality
 # Definir una función para manejar la confirmación de viaje
@@ -78,28 +77,10 @@ confirmation_questions = [
     "Edades:",
     "Salida de Quito o Guayaquil:"
 ]
-# def guardar_en_json(data, filename):
-    
-#     with open(filename, 'w') as json_file:
-#         json.dump(data, json_file, indent=4)
 
-# # Después de obtener las respuestas del usuario en handle_confirmation()
-# # Creamos un diccionario con la información del usuario
-# usuario_info = {
-#     "Nombre": mensaje_recibido[0],
-#     "Correo electrónico": mensaje_recibido[1],
-#     "Destino": mensaje_recibido[2],
-#     "Fecha tentativa": mensaje_recibido[3],
-#     "Cuantas personas viajan": mensaje_recibido[4],
-#     "Edades": mensaje_recibido[5],
-#     "Salida de Quito o Guayaquil": mensaje_recibido[6]
-# }
-
-# # Especificamos el nombre del archivo JSON en el que queremos guardar la información
-# nombre_archivo = "informacion_usuario.json"
-
-# # Guardamos la información del usuario en un archivo JSON
-# guardar_en_json(usuario_info, nombre_archivo)
+def guardar_en_json(data, filename):
+    with open(filename, 'w') as json_file:
+        json.dump(data, json_file, indent=4)
 
 
 def clean_up_sentence(sentence):
@@ -133,35 +114,59 @@ def predict_class(sentence):
 
 def get_response(ints, intents):
     tag = ints[0]['intent']
-    list_of_intents = intents['intents']  # Aquí se cambia de intents_json a intents
+    list_of_intents = intents.get('intents', [])  # Usa get() para manejar el caso en que 'intents' no esté definido
     for i in list_of_intents:
         if i['tag'] == tag:
-            result = random.choice(i['responses'])
-            return result
+            responses = i.get('responses', [])  # Usa get() para manejar el caso en que 'responses' no esté definido
+            if responses:
+                result = random.choice(responses)
+                return result
     return "Lo siento, no puedo responder esa pregunta en este momento."
 
 
 def chatbot_response(message, user_id):
-    # Si el usuario ya ha proporcionado su nombre, incluirlo en la respuesta
     global user_name
+    global confirmation_info
+    # Verifica si el user_name ya está establecido y usa ese valor para personalizar el mensaje
     if user_name:
         message = f"{user_name}, {message}"
-    ints = predict_class(message)
-    if ints[0]["intent"] != "no_match":
-        res = get_response(ints, intents)
-        if res is not None:
-            return res
-        else:
-            return "Lo siento, no puedo responder esa pregunta en este momento."
-    else:
-        return "Lo siento, no entendí tu pregunta."
-
     
+    # Agrega una verificación para asegurarte de que el mensaje sea suficientemente largo y compuesto de caracteres alfanuméricos
+    if len(message) < 3 or not any(char.isalnum() for char in message):
+        return "Lo siento, no entendí tu pregunta."
+    
+    # Verifica si el mensaje contiene nombres de países mencionados
+    mentioned_countries = ["Panamá", "Colombia", "Argentina", "Brasil", "Caribe", "Bahamas", "Cuba", "Peru"]  
+    countries_mentioned = [country for country in mentioned_countries if country.lower() in message.lower()]
+    
+    if countries_mentioned:
+        # Si hay países mencionados, procesa el mensaje en consecuencia
+        respuestas_pais = []
+        for country in countries_mentioned:
+            # Obtener las respuestas asociadas con el país mencionado
+            intents_for_country = [intent for intent in intents.get('intents', []) if country.lower() in intent.get('patterns', [''])[0].lower()]
+            for intent in intents_for_country:
+                respuestas_pais.extend(intent.get('responses', []))
+        
+        respuesta = ' '.join(respuestas_pais) if respuestas_pais else "Lo siento, no tengo información sobre esos países."
+    else:
+        # Si no hay países mencionados, procesa el mensaje como de costumbre
+        ints = predict_class(message)
+        respuesta = get_response(ints, intents)
+        if respuesta is None:
+            respuesta = "Lo siento, no puedo responder esa pregunta en este momento."
+        elif ints[0]["intent"] == "confirmacion":
+            # Si la intención es confirmación, llama a la función para manejar la confirmación
+            # y luego devuelve un mensaje apropiado
+            confirmation_response = get_confirmation_response(confirmation_questions)
+            respuesta = "¡Gracias! La información ha sido guardada."
+    return respuesta
+
 def extract_name(text):
     if not any(char.isupper() for char in text):
         return None
     # Lista de posibles patrones para identificar el nombre
-    patterns = ['mi nombre es', 'me llamo', 'soy', 'me dicen']
+    patterns = ['mi nombre es', 'me llamo', 'me dicen']
     
     text_lower = text.lower()
     # Buscar cada patrón en el texto
@@ -179,51 +184,38 @@ def extract_name(text):
 # Routes
 @app.route('/chat', methods=['POST'])
 def chat_route():
-    global user_name
-    global confirming
-    global confirmation_questions
-
+    global user_name  # Declarar user_name como global para modificar la variable global dentro de la función
     data = request.json
+    # Establecer user_id en None inicialmente
     user_id = None
 
     if 'mensaje' in data:
         mensaje_recibido = data['mensaje']
-        nombre = extract_name(mensaje_recibido)
-
+        nombre = extract_name(mensaje_recibido)  # Movido aquí
+        # Revisar si 'user_id' está presente en los datos recibidos
         if 'user_id' in data:
             user_id = data['user_id'] 
+        # Manejar el caso donde 'user_id' no está presente en data
         else:
+            # Puedes asignar un valor predeterminado o devolver un mensaje de error
             user_id = None  
-
+        # Verificar si el mensaje contiene una solicitud para establecer un nombre
+        nombre = extract_name(mensaje_recibido)  
         if nombre:
             user_id = nombre
+           
             respuesta = f"¡Bienvenido, {nombre}! ¿En qué puedo ayudarte hoy?"
         else:
-            if confirming:
-                # Si estamos en el proceso de confirmación, esperamos respuestas a las preguntas de confirmación
-                # y luego enviamos un mensaje de confirmación con los datos proporcionados por el usuario
-                confirmation_response = {}
-                for question in confirmation_questions:
-                    respuesta_usuario = data.get(question.lower(), "")
-                    confirmation_response[question] = respuesta_usuario
-
-                # Formatear las respuestas del usuario como una lista o con saltos de línea
-                user_responses_message = "\n".join([f"- {question}: {response}" for question, response in confirmation_response.items()])
-
-                respuesta = f"Gracias por proporcionar la información:\n{user_responses_message}\n"
-                confirming = False  # Salir del modo de confirmación
+            respuestas_pais = []
+            for intent in intents.get('intents', []):
+                if intent['tag'] == data.get('tag', ''):
+                    for pattern in intent['patterns']:
+                        if pattern.lower() in mensaje_recibido.lower():
+                            respuestas_pais.extend(intent.get('responses', []))
+            if respuestas_pais:
+                return jsonify({"respuestas": respuestas_pais})
             else:
-                # Si no estamos en el proceso de confirmación, procesamos el mensaje como de costumbre
-                ints = predict_class(mensaje_recibido)
-                respuesta = get_response(ints, intents)
-
-                if respuesta.startswith("Para poder ayudarte necesitamos saber la siguiente información"):
-                    # Si la respuesta del chatbot indica que se necesita más información,
-                    # activamos el modo de confirmación y solicitamos las respuestas del usuario
-                    confirming = True
-                    # Formatear las preguntas de confirmación como una lista o con saltos de línea
-                    confirmation_questions_message = "\n".join(confirmation_questions)
-                    respuesta = f"{respuesta}\nPor favor, responde las siguientes preguntas:\n{confirmation_questions_message}"
+                respuesta = chatbot_response(mensaje_recibido, user_id)
     else:
         respuesta = "No se proporcionó un mensaje válido."
 
