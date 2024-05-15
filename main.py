@@ -37,50 +37,38 @@ translator = Translator()
 
 # Functions for chatbot functionality
 # Definir una función para manejar la confirmación de viaje
-def handle_confirmation():
-    # Mostrar el mensaje de confirmación
-    for intent in intents['intents']:
-        if intent['tag'] == 'confirmacion':
-            print(random.choice(intent['responses']))
-            break
+# def handle_confirmation():
+#     # Inicializar un diccionario para almacenar la información del viaje
+#     trip_info = {}
 
-    # Inicializar un diccionario para almacenar la información del viaje
-    trip_info = {}
+#     # Mostrar el mensaje de confirmación
+#     confirm_message = "Para poder ayudarte necesitamos saber la siguiente información:"
 
-    # Iterar sobre las preguntas y solicitar al usuario que proporcione la información
-    for question in confirmation_questions:
-        response = input(question + " ")
-        trip_info[question] = response
-
-    # Devolver el diccionario con la información del viaje
-    return trip_info
+#     return trip_info, confirm_message
 
 
-# Obtener la respuesta del usuario al patrón de confirmación de viaje
-def get_confirmation_response(confirmation_questions):
-    # Solicitar y guardar la información del usuario
-    global confirmation_response
-    confirmation_response = handle_confirmation()
-    user_responses_message = "\n".join([f"{question}: {response}" for question, response in confirmation_response.items()])  # Formatear las respuestas del usuario con un salto de línea
-    print("Información confirmada:")
-    print(user_responses_message)
+# # Obtener la respuesta del usuario al patrón de confirmación de viaje
+# def get_confirmation_response(confirmation_questions):
+#     # Solicitar y guardar la información del usuario
+#     trip_info, confirm_message = handle_confirmation()
 
-    return user_responses_message  # Devolver el mensaje de las respuestas del usuario con formato de salto de línea
+#     return confirm_message, trip_info  # Devolver el mensaje de las respuestas del usuario con formato de salto de línea
 
-# Definir la lista de preguntas de confirmación
-confirmation_questions = [
-    "Nombre:",
-    "Correo electrónico:",
-    "Destino:",
-    "Fecha tentativa:",
-    "Cuantas personas viajan:",
-    "Edades:",
-    "Salida de Quito o Guayaquil:"
-]
+# confirmation_questions = [
+#     "Nombre:",
+#     "Correo electrónico:",
+#     "Destino:",
+#     "Fecha tentativa:",
+#     "Cuantas personas viajan:",
+#     "Edades:",
+#     "Salida de Quito o Guayaquil:"
+# ]
 
-def guardar_en_json(data, filename):
-    with open(filename, 'w') as json_file:
-        json.dump(data, json_file, indent=4)
+
+
+# def guardar_en_json(data, filename):
+#     with open(filename, 'w') as json_file:
+#         json.dump(data, json_file, indent=4)
 
 
 def clean_up_sentence(sentence):
@@ -146,8 +134,11 @@ def chatbot_response(message, user_id):
             # Obtener las respuestas asociadas con el país mencionado
             intents_for_country = [intent for intent in intents.get('intents', []) if country.lower() in intent.get('patterns', [''])[0].lower()]
             for intent in intents_for_country:
+                for response in intent.get('responses', []):
+                    if response.strip() and message.strip() and response.split()[0].lower() in message.split()[0].lower():
+                        respuestas_pais.append(response)
                 respuestas_pais.extend(intent.get('responses', []))
-        
+                
         respuesta = ' '.join(respuestas_pais) if respuestas_pais else "Lo siento, no tengo información sobre esos países."
     else:
         # Si no hay países mencionados, procesa el mensaje como de costumbre
@@ -158,8 +149,10 @@ def chatbot_response(message, user_id):
         elif ints[0]["intent"] == "confirmacion":
             # Si la intención es confirmación, llama a la función para manejar la confirmación
             # y luego devuelve un mensaje apropiado
-            confirmation_response = get_confirmation_response(confirmation_questions)
-            respuesta = "¡Gracias! La información ha sido guardada."
+            confirm_message = "Para poder ayudarte necesitamos saber la siguiente información:"
+            resultado = "¡Gracias! La información ha sido guardada."
+            return confirm_message, confirmation_questions, resultado
+            
     return respuesta
 
 def extract_name(text):
@@ -215,7 +208,15 @@ def chat_route():
             if respuestas_pais:
                 return jsonify({"respuestas": respuestas_pais})
             else:
+                
                 respuesta = chatbot_response(mensaje_recibido, user_id)
+                if isinstance(respuesta, tuple):
+                    # Si la respuesta es una tupla, significa que es el mensaje de confirmación y la información del viaje
+                    confirm_message, confirmation_questions = respuesta
+                    return jsonify({"confirmacion": confirm_message, "preguntas_confirmacion": confirmation_questions})
+                else:
+                    # Si no es una tupla, es la respuesta del chatbot
+                    return jsonify({"respuesta": respuesta})
     else:
         respuesta = "No se proporcionó un mensaje válido."
 

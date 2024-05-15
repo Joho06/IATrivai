@@ -44,8 +44,8 @@
     {
       "tag": "edad",
       "patterns": [
-        "que edad tienes?",
-        "cual es tu edad?"
+        "edad tienes",
+        "es tu edad"
       ],
       "responses": [
         "Soy solo un programa de computadora, así que no tengo edad.",
@@ -58,8 +58,8 @@
     {
       "tag": "clima",
       "patterns": [
-        "¿Cómo está el tiempo?",
-        "¿Cómo está el tiempo hoy?"
+        "Cómo está el tiempo",
+        "Cómo está el tiempo hoy"
       ],
       "responses": [
         "Puedes consultar el pronóstico del tiempo en línea o en tu teléfono.",
@@ -67,20 +67,6 @@
         "Me temo que no puedo proporcionar actualizaciones meteorológicas en tiempo real. ¡Prueba una aplicación meteorológica!",
         "No tengo una función de pronóstico del tiempo, pero puedo ayudarte con otras consultas.",
         "Las condiciones meteorológicas varían según la ubicación. Es posible que desees consultar un sitio web meteorológico."
-      ]
-    },
-    {
-      "tag": "chiste",
-      "patterns": [
-        "Cuéntame un chiste",
-        "¿Sabes algún chiste?"
-      ],
-      "responses": [
-        "¿Por qué los científicos no confían en los átomos? ¡Porque lo conforman todo!",
-        "¿Cómo llamas a la pasta falsa? ¡Un impostor!",
-        "¿Por qué el espantapájaros ganó un premio? ¡Porque era sobresaliente en su campo!",
-        "¿Por qué no podía mantenerse en pie la bicicleta por sí sola? ¡Estaba cansada!",
-        "¿Qué es naranja y suena como un loro? ¡Una zanahoria!"
       ]
     },
     {
@@ -144,27 +130,15 @@
       ]
     },
     {
-      "tag": "lugares_interes",
-      "patterns": [
-        "¿Qué lugares de interés recomiendas en ?",
-        "¿Cuáles son los mejores lugares para visitar en ?",
-        "¿Qué actividades turísticas son populares en ?"
-      ],
-      "responses": [
-        "En , algunos lugares de interés populares incluyen .",
-        "Recomendamos visitar  y  en.",
-        "Las actividades turísticas más populares en incluyen ,  y ."
-      ]
-    },
-    {
       "tag": "alojamiento",
       "patterns": [
         "¿Qué opciones de alojamiento hay en ?",
         "¿Puedes recomendarme un hotel en ?",
-        "Estoy buscando un lugar para hospedarme en ."
+        "Estoy buscando un lugar para hospedarme en ",
+        "me interesa"
       ],
       "responses": [
-        "Hay una variedad de opciones de alojamiento que van desde hoteles de lujo hasta hostales económicos.",
+        "",
         "¿Prefieres un hotel con vista al mar o en el centro de la ciudad?"
       ]
     },
@@ -195,15 +169,6 @@
       ]
     },
     {
-      "tag": "hora",
-      "patterns": [
-        "¿Qué hora es?"
-      ],
-      "responses": [
-        "Es hora de ir de viaje, ¿a donde te gustaria ir?"
-      ]
-    },
-    {
       "tag": "comida",
       "patterns": [
         "¿Qué opciones de comida hay en cierto destino?",
@@ -228,41 +193,21 @@
       ]
     },
     {
-      "tag": "datos_enviados",
-      "patterns": [
-        "Quito",
-        "Guayaquil",
-        "@",
-        ".com"
-      ],
-      "responses": [
-        "Correcto registrare tus datos"
-      ]
-    },
-    {
       "tag": "reserva",
       "patterns": [
-        "¿Quiero reservar un vuelo?"
+        "Quiero reservar un vuelo"
       ],
       "responses": [
         "¡Por supuesto! ¿Podrías proporcionarme detalles sobre tu viaje? Por ejemplo, ¿a dónde quieres ir y cuándo?"
       ]
     },
-    {
-      "tag": "informacion_vuelos",
-      "patterns": [
-        "información sobre vuelos"
-      ],
-      "responses": [
-        "¡Por supuesto! ¿Podrías proporcionarme detalles sobre tu viaje? Por ejemplo, ¿a dónde quieres ir y cuándo?"
-      ]
-    },
+    
     {
       "tag": "no_entendido",
       "patterns": [
         "No entiendo",
         "No comprendo",
-        "¿Puedes repetir?"
+        "Puedes repetir"
       ],
       "responses": [
         "Lo siento, ¿puedes reformular tu pregunta?"
@@ -271,9 +216,9 @@
     {
       "tag": "alojamiento",
       "patterns": [
-        "opciones de alojamiento ofrecen?",
-        "¿tipo de habitaciones tienen?",
-        "¿cuesta el alojamiento?"
+        "opciones de alojamiento ofrecen",
+        "tipo de habitaciones tienen",
+        "cuesta el alojamiento"
       ],
       "responses": [
         "Ofrecemos una variedad de opciones de alojamiento, desde hoteles de lujo hasta apartamentos y villas. ¿Qué tipo de alojamiento estás buscando?",
@@ -281,15 +226,7 @@
         "Los precios de nuestros alojamientos varían según la ubicación y las comodidades. ¿Cuál es tu presupuesto para el alojamiento?"
       ]
     },
-    {
-      "tag": "confirmacion",
-      "patterns": [
-        "Estoy interesado"
-      ],
-      "responses": [
-        "Para poder ayudarte necesitamos saber la siguiente información:"
-      ]
-    },
+   
     {
       "tag": "datos_enviados",
       "patterns": [
@@ -303,18 +240,9 @@
       ]
     },
     {
-      "tag": "informacion_vuelos",
-      "patterns": [
-        "información sobre vuelos"
-      ],
-      "responses": [
-        "¡Por supuesto! ¿Podrías proporcionarme detalles sobre tu viaje? Por ejemplo, ¿a dónde quieres ir y cuándo?"
-      ]
-    },
-    {
       "tag": "agendar_viaje",
       "patterns": [
-        "¿agendar un viaje?",
+        "agendar un viaje",
         "Quisiera agendar un viaje",
         "a ver, agendame un viaje",
         "reservar"
@@ -326,12 +254,11 @@
     {
       "tag": "querer_informacion",
       "patterns": [
-        "necesito información",
-        "quiero información",
-        " hola que tal necesito información"
+        "ayudeme con información",
+        "quiero información"
       ],
       "responses": [
-        "Claro, puedo proporcionarte información detallada sobre cualquier destino que te interese. ¿Hay algún lugar en particular del que te gustaría saber más?"
+        "Por supuesto, puedo proporcionarte información detallada sobre cualquier destino que te interese.\n Tenemos los siguientes lugares para visitar:\nColombia\nPanama\nPerù\nCaribe\nBahamas\nBrasil\nArgentina\nCuba\nCual lugar te interesaria o quisieras informacion"
       ]
     },
     {
@@ -357,7 +284,45 @@
       ]
     },
     {
-      "tag": " negacion",
+      "tag": "hoteles_mar",
+      "patterns": [
+        "vista al mar"
+        
+      ],
+      "responses": [
+        "Tenemos un hotel cerca de mar que te gustaria `Se envian las imagenes`"
+      ]
+    },
+    {
+      "tag": "hoteles_centro",
+      "patterns": [
+        "centro de la ciudad"
+      ],
+      "responses": [
+        "Tenemos un hotel cerca de mar que te gustaria `Se envian las imagenes`"
+      ]
+    },
+    {
+      "tag": "hoteles_oceano",
+      "patterns": [
+        "cerca del oceano"
+      ],
+      "responses": [
+        "Tenemos un hotel cerca de mar que te gustaria `Se envian las imagenes`"
+      ]
+    },
+    {
+      "tag": "hoteles",
+      "patterns": [
+        "hoteles me recomiendas"
+      ],
+      "responses": [
+        "Hay una variedad de opciones de hoteles que van desde hoteles de lujo hasta hostales económicos.",
+        "Te recomendamos los siguientes hoteles:\nPunta cana\nHotel Marriot\nSwisshotel\nHotel la vegasmar `Se envian las imagenes`"
+      ]
+    },
+    {
+      "tag": "negacion",
       "patterns": [
         "No",
         "no, gracias",
@@ -370,23 +335,26 @@
       ]
     },
     {
-      "tag": "forma_pag",
+      "tag": "forma_pago",
       "patterns": [
         "metodo de pago",
         "formas de pago",
         "pago",
+        "pagar",
         "informacion de pago"
       ],
       "responses": [
-        "Claro Para completar tu reserva, te ofrecemos varias opciones de pago. Puedes realizar una transferencia bancaria, pagar con tarjeta de crédito o utilizar otras plataformas de pago en línea. Por favor, avísanos cuál prefieres y te proporcionaremos los detalles necesarios para proceder."
+        "Claro! Para completar tu reserva, te ofrecemos varias opciones de pago:\n Puedes realizar una transferencia bancaria,\nPagos con tarjeta de crédito o utilizar otras plataformas de pago en línea.\nTambien contamoscon pagos en efectivo.\n Por favor, avísanos cuál prefieres y te proporcionaremos los detalles necesarios para proceder."
       ]
     },
     {
-      "tag": "credioto",
+      "tag": "credito",
       "patterns": [
         "pago con tarjeta",
-        "pagar con tarjeta",
-        "tarjeta de crédito"
+        "pagar con tarjeta de credito",
+        "tarjeta de crédito",
+        "pagar",
+        "crédito"
       ],
       "responses": [
         "Claro para procesar el pago con tarjeta de crédito, necesitamos la siguiente información:\nNúmero de la tarjeta de crédito: \nFecha de vencimiento: \nCódigo de seguridad (CVV/CVC): \nNombre del titular de la tarjeta: \nDirección de facturación:"
@@ -395,7 +363,9 @@
     {
       "tag": "debito",
       "patterns": [
-        "tarjeta de debito"
+        "tarjeta de debito",
+        "pagar con tarjeta de debito",
+        "debito"
       ],
       "responses": [
         "Claro para procesar el pago con tarjeta de debito, necesitamos la siguiente información:\nNúmero de la tarjeta de debito: \nFecha de vencimiento: \nCódigo de seguridad (CVV/CVC): \nNombre del titular de la tarjeta: \nDirección de facturación:"
@@ -406,7 +376,6 @@
       "patterns": [
         "datos de cuenta bancaria",
         "cuenta bancaria",
-        "información bancaria",
         "transferencia"
       ],
       "responses": [
@@ -420,22 +389,17 @@
         "abono"
       ],
       "responses": [
-        "No hay problema. Para realizar el pago, por favor acérquese a nuestras oficinas ubicadas en el centro comercial Galería Plaza, Local N7.  ¿A qué hora te gustaría agendar una cita? Estamos disponibles de lunes a viernes de 9 am a 6 pm . Por favor, avísenos su preferencia para coordinar la cita. ¡Gracias"
+        "No hay problema. Para realizar el pago, por favor acérquese a nuestras oficinas ubicadas en el centro comercial Galería Plaza, Local N7.\n¿A qué hora te gustaría agendar una cita?\nEstamos disponibles de lunes a viernes de 9 am a 6 pm.\n Por favor, avísenos su preferencia para coordinar la cita.\n¡Gracias"
       ]
     },
     {
       "tag": "tiempo_reserva",
       "patterns": [
-        "listo gracias"
-      ],
-      "responses": [
-        "• Para mantener esta reservación en firme se requiere el pago del abono de $100, NO REEMBOLSABLE en el caso de pasajeros individuales o grupos. Aplica hasta 31 días antes del viaje para individuales y 46 días para grupos.\n• El pago total de una reservación deberá ser realizada hasta 30 días antes de la salida. \n• Si una reservación ingresa 30 días antes de la salida, el pago total deberá estar realizado en 24 horas luego de haber sido realizada la misma. \n• Reservaciones que no tengan pago SE CANCELARÁN a las 24 HORAS. \n• En el caso de grupos de pasajeros el pago total se debe realizar 45 días antes de la salida, \n• Penalidad por cambio de nombre: USD $150 hasta 10 días antes de la salida en vuelo chárter \n• No se permite cambios de fecha o destino \n• Al momento de la facturación usted acepta estar de acuerdo con los servicios detallados y está de acuerdo con las penalidades descritas en esta liquidación de servicios sin excepción alguna."
-      ]
-    },
-    {
-      "tag": "dividir_Colombia",
-      "patterns": [
-        "listo gracias"
+        "listo gracias",
+        "ayudeme",
+        "quiero este paquete",
+        "podria reservar este",
+        "estoy interesado"
       ],
       "responses": [
         "• Para mantener esta reservación en firme se requiere el pago del abono de $100, NO REEMBOLSABLE en el caso de pasajeros individuales o grupos. Aplica hasta 31 días antes del viaje para individuales y 46 días para grupos.\n• El pago total de una reservación deberá ser realizada hasta 30 días antes de la salida. \n• Si una reservación ingresa 30 días antes de la salida, el pago total deberá estar realizado en 24 horas luego de haber sido realizada la misma. \n• Reservaciones que no tengan pago SE CANCELARÁN a las 24 HORAS. \n• En el caso de grupos de pasajeros el pago total se debe realizar 45 días antes de la salida, \n• Penalidad por cambio de nombre: USD $150 hasta 10 días antes de la salida en vuelo chárter \n• No se permite cambios de fecha o destino \n• Al momento de la facturación usted acepta estar de acuerdo con los servicios detallados y está de acuerdo con las penalidades descritas en esta liquidación de servicios sin excepción alguna."
@@ -447,14 +411,16 @@
         "informacion Colombia",
         "ofertas Colombia",
         "viajes a Colombia",
+        "tienes algo",
         "Colombia"
       ],
       "responses": [
-        "CARTAGENA 3 NOCHES Ticket aéreo Guayaquil o Quito / Cartagena / Quito o Guayaquil Vía avianca\n\nINCLUYE:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 03 noches de alojamiento en HOTEL ZALMEDINA\n• Desayunos diarios\n• Cortesía:\n- City tour + Visita al Castillo de San Felipe con entrada.\n- Chip + bolsa de café por habitación\n• Impuestos hoteleros y aéreos\n$447",
-        "CARTAGENA 3 NOCHES TODO INLUIDO Ticket aéreo Guayaquil o Quito / Cartagena / Quito o Guayaquil Vía avianca\n\nINCLUYE:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 03 noches de alojamiento en HOTEL CARTAGENA PLAZA\n• Desayuno, almuerzo y cena tipo buffet\n• Snacks y bar abierto\n• Piscina panorámica\n• Bar & discoteca\n• Noches temáticas y shows de baile\n• Kids & teen clubs\n• Wifi gratuito en las instalaciones\n• CORTESÍAS:\n- City tour + Castillo de San Felipe con entrada\n- Chip celular y bolsa de café por habitación\n$565",
-        "CARTAGENA! ALL INCLUSIVE 04 NOCHES Ticket aéreo QUITO - GUAYAQUIL / CARTAGENA / GUAYAQUIL - QUITO\n\nINCLUYE:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 04 noches de alojamiento en HOTEL CARTAGENA PLAZA\n• Desayuno, almuerzo y cena tipo buffet\n• Snacks y bar abierto\n• Piscina panorámica\n• Bar & discoteca\n• Noches temáticas y shows de baile\n• Kids & teen clubs\n• Wifi gratuito en las instalaciones\n$829",
-        "CARTAGENA BÁSICO\n4 DÍAS / 3 NOCHES\nIncluye:\n• 03 noches de alojamiento de acuerdo con el hotel elegido.\n• Desayunos diarios.\n• Traslados in/out – Servicio privado en horario diurno. (Sin guía acompañante)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\n$217 DBL\n$192 TPL",
-        "MEDELLÍN BÁSICO\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• Traslado aeropuerto MDE – Hotel – aeropuerto MDE en servicio privado en horario diurno. (sin guía acompañante)\n• 03 noches de Alojamiento en hotel seleccionado\n• Desayunos Diarios\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\n$192 DBL\n$184 TPL",
+        "Perfecto! Tengo los siguiente paquetes:\n\n",
+        "CARTAGENA 3 NOCHES Ticket aéreo Guayaquil o Quito / Cartagena / Quito o Guayaquil Vía avianca\n\nINCLUYE:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 03 noches de alojamiento en HOTEL ZALMEDINA\n• Desayunos diarios\n• Cortesía:\n- City tour + Visita al Castillo de San Felipe con entrada.\n- Chip + bolsa de café por habitación\n• Impuestos hoteleros y aéreos\n$447\n\n",
+        "CARTAGENA 3 NOCHES TODO INLUIDO Ticket aéreo Guayaquil o Quito / Cartagena / Quito o Guayaquil Vía avianca\n\nINCLUYE:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 03 noches de alojamiento en HOTEL CARTAGENA PLAZA\n• Desayuno, almuerzo y cena tipo buffet\n• Snacks y bar abierto\n• Piscina panorámica\n• Bar & discoteca\n• Noches temáticas y shows de baile\n• Kids & teen clubs\n• Wifi gratuito en las instalaciones\n• CORTESÍAS:\n- City tour + Castillo de San Felipe con entrada\n- Chip celular y bolsa de café por habitación\n$565\n\n",
+        "CARTAGENA! ALL INCLUSIVE 04 NOCHES Ticket aéreo QUITO - GUAYAQUIL / CARTAGENA / GUAYAQUIL - QUITO\n\nINCLUYE:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 04 noches de alojamiento en HOTEL CARTAGENA PLAZA\n• Desayuno, almuerzo y cena tipo buffet\n• Snacks y bar abierto\n• Piscina panorámica\n• Bar & discoteca\n• Noches temáticas y shows de baile\n• Kids & teen clubs\n• Wifi gratuito en las instalaciones\n$829\n\n",
+        "CARTAGENA BÁSICO\n4 DÍAS / 3 NOCHES\nIncluye:\n• 03 noches de alojamiento de acuerdo con el hotel elegido.\n• Desayunos diarios.\n• Traslados in/out – Servicio privado en horario diurno. (Sin guía acompañante)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\n$217 DBL\n$192 TPL\n\n",
+        "MEDELLÍN BÁSICO\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• Traslado aeropuerto MDE – Hotel – aeropuerto MDE en servicio privado en horario diurno. (sin guía acompañante)\n• 03 noches de Alojamiento en hotel seleccionado\n• Desayunos Diarios\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\n$192 DBL\n$184 TPL\n\n",
         "BOGOTÁ “CIUDAD DE CULTURA Y ARQUITECTURA”\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• 03 noches de alojamiento de acuerdo con el hotel seleccionado + desayuno incluido\n• Traslado in / out en servicio privado sin guía acompañante – aplica para horarios diurnos\n• Visita a la ciudad y sus lugares más emblemáticos con ascenso al cerro de Monserrate y entrada a Museo de Oro.\n• Visita a la catedral de sal en Zipaquirá\n• IVA e impuestos de Ecuador\nDESDE\n$386 DBL\n$349 TPL"
       ]
     },
@@ -464,10 +430,12 @@
         "informacion Panamá",
         "ofertas Panamá",
         "viajes a Panamá",
+        "tienes algo",
         "Panamá"
       ],
       "responses": [
-        "PANAMA CIUDAD Y PLAYA BLANCA\n6 DÍAS / 5 NOCHES\nPROGRAMA INCLUYE:\nTraslados aeropuerto PTY  hotel playa   hotel ciudad   aeropuerto en PTY en servicio compartido y en horario diurno.PANAMÁ CIUDAD:\n• 02 noches de Alojamiento en hotel The Executive u Hotel Hampton by Hilton + 01 noche GRATIS\n• Habitación Estándar.\n• Desayunos diarios\n• Día Completo - City Tour + Canal (sin entrada) + Compras (martes, jueves, sábado y domingo)\n• Día Completo- Full Day Zona Libre (sólo aplica lunes, miércoles y viernes)\n\nPANAMÁ PLAYA:\n• 02 noches de alojamiento en Hotel Playa Blanca\n• Habitación Garden View\n• Sistema de alimentación Todo Incluido.\n• Desayunos diarios\n• Impuestos Hoteleros \n• IVA en impuestos de Ecuador\n$432 DBL / $399 TPL",
+        "Perfecto! Tengo los siguiente paquetes:\n\n",
+        "PANAMA CIUDAD Y PLAYA BLANCA\n6 DÍAS / 5 NOCHES\nPROGRAMA INCLUYE:\nTraslados aeropuerto PTY  hotel playa   hotel ciudad   aeropuerto en PTY en servicio compartido y en horario diurno.PANAMÁ CIUDAD:\n• 02 noches de Alojamiento en hotel The Executive u Hotel Hampton by Hilton + 01 noche GRATIS\n• Habitación Estándar.\n• Desayunos diarios\n• Día Completo - City Tour + Canal (sin entrada) + Compras (martes, jueves, sábado y domingo)\n• Día Completo- Full Day Zona Libre (sólo aplica lunes, miércoles y viernes)\n\nPANAMÁ PLAYA:\n• 02 noches de alojamiento en Hotel Playa Blanca\n• Habitación Garden View\n• Sistema de alimentación Todo Incluido.\n• Desayunos diarios\n• Impuestos Hoteleros \n• IVA en impuestos de Ecuador\n$432 DBL / $399 TPL\n\n",
         "PANAMÁ DE COMPRAS\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• Traslados aeropuerto – hotel – aeropuerto en PTY en servicio compartido en horario diurno.\n• 02 noches de Alojamiento en hotel según elección + 01 noche GRATIS\n• Full Day City Tour + Canal (sin entradas) + Compras (martes, jueves, sábado y domingo)\n• CORTESÍA: Full Day Zona Libre (lunes, miércoles y viernes)\n• Desayunos diarios\n• Impuestos Hoteleros \n• IVA en impuestos de Ecuador\nHOTEL HOSPEDIUM PRINCESS\n$156 DBL\n$148 TPL"
       ]
     },
@@ -477,11 +445,13 @@
         "informacion Brasil",
         "ofertas Brasil",
         "viajes a Brasil",
+        "tienes algo",
         "Brasil"
       ],
       "responses": [
+        "Perfecto! Tengo los siguiente paquetes:\n\n",
         "SAO PAULO\n4 DÍAS / 3 NOCHES\nLand Tour\nPROGRAMA INCLUYE:\nTraslado aeropuerto GRU – hotel SAO – aeropuerto GRU en servicio privado.\n03 noches de alojamiento en hotel seleccionado con desayunos diarios incluidos\nHalf Day City Tour - servicio privado.\nSeguro de viaje ASSIST CARD por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\nImpuestos hoteleros\nIVA mayorista y de agencias\nDESDE\nSGL – $821\nDBL - $453",
-        "IGUAZÚ INOLVIDABLE\n4 DÍAS / 3 NOCHES\nLand Tour\nPROGRAMA INCLUYE:\nTraslado aeropuerto IGU/IGR – hotel – aeropuerto IGU/IGR en servicio compartido.\n03 noches de alojamiento en hotel seleccionado con desayunos diarios incluidos\n• Tour Cataratas Argentina (entrada incluida)\n• Tour Cataratas Brasil (entrada incluida)\n• Dutty Free Lado Argentina\n• Hito de las 3 Fronteras Brasil (sin entradas)\n• Parada en Parque de Aves (entrada incluida)\nSeguro de viaje ASSIST CARD por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\nImpuestos hoteleros\nIVA mayorista y de agencias\nDESDE\nDBL- $419\nTPL - $390",
+        "IGUAZÚ INOLVIDABLE\n4 DÍAS / 3 NOCHES\nLand Tour\nPROGRAMA INCLUYE:\nTraslado aeropuerto IGU/IGR – hotel – aeropuerto IGU/IGR en servicio compartido.\n03 noches de alojamiento en hotel seleccionado con desayunos diarios incluidos\n• Tour Cataratas Argentina (entrada incluida)\n• Tour Cataratas Brasil (entrada incluida)\n• Dutty Free Lado Argentina\n• Hito de las 3 Fronteras Brasil (sin entradas)\n• Parada en Parque de Aves (entrada incluida)\nSeguro de viaje ASSIST CARD por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\nImpuestos hoteleros\nIVA mayorista y de agencias\nDESDE\nDBL- $419\nTPL - $390\n\n",
         "IGUAZÚ INOLVIDABLE\n4 DÍAS / 3 NOCHES\nLand Tour\nPROGRAMA INCLUYE:\nTraslado aeropuerto IGU/IGR – hotel – aeropuerto IGU/IGR en servicio compartido.\n03 noches de alojamiento en hotel seleccionado con desayunos diarios incluidos\n• Tour Cataratas Argentina (entrada incluida)\n• Tour Cataratas Brasil (entrada incluida)\n• Dutty Free Lado Argentina\n• Hito de las 3 Fronteras Brasil (sin entradas)\n• Parada en Parque de Aves (entrada incluida)\nSeguro de viaje ASSIST CARD por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\nImpuestos hoteleros\nIVA mayorista y de agencias\nDESDE\nDBL - $1018 \nTPL - $931"
       ]
     },
@@ -491,11 +461,13 @@
         "informacion Argentina",
         "ofertas Argentina",
         "viajes a Argentina",
+        "tienes algo",
         "Argentina"
       ],
       "responses": [
-        "BARILOCHE CLÁSICO\n3 DÍAS / 2 NOCHES\nPROGRAMA INCLUYE:\n• 02 noches de alojamiento en el hotel seleccionado.\n• Desayunos diarios.\n• Excursión Circuito Chico en servicio regular.\n• Traslado Apto – Hotel – Apto en servicio regular.\n• Seguro de asistencia Assist Card x 3 días (sólo aplica para ecuatorianos. Suplemento en seguro para mayores de 70 años)\n• Impuestos Hoteleros\nIVA e impuestos de Ecuador\nDESDE\nSGL – $257 - DBL/TPL - $236",
-        "BUENOS AIRES DE REGALO\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• 03 noches de alojamiento en el hotel seleccionado con desayuno e impuestos incluidos. \n• Traslados Aeropuerto/Hotel/Aeropuerto en servicio Semi-privado. \n• Excursión de medio día City tour en servicio regular (regreso al hotel por cuenta propia).  \n• Tour de Compras en fábricas de cuero, ropa, etc. (Cortesía) \n• Cortesía: Casino Puerto Madero: Entrada y traslado gratis brindado por el Casino para mayores de 18 años. \n• Cortesía: 10% de descuento por consumo a la carta en el Restaurant Puerto Cristal en Puerto Madero. \n• Seguro de viaje ASSIST CARD por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\n• Iva e Impuestos.\nDESDE\n$244 - DBL\n$236 – TPL",
+        "Perfecto! Tengo los siguiente paquetes:\n\n",
+        "BARILOCHE CLÁSICO\n3 DÍAS / 2 NOCHES\nPROGRAMA INCLUYE:\n• 02 noches de alojamiento en el hotel seleccionado.\n• Desayunos diarios.\n• Excursión Circuito Chico en servicio regular.\n• Traslado Apto – Hotel – Apto en servicio regular.\n• Seguro de asistencia Assist Card x 3 días (sólo aplica para ecuatorianos. Suplemento en seguro para mayores de 70 años)\n• Impuestos Hoteleros\nIVA e impuestos de Ecuador\nDESDE\nSGL – $257 - DBL/TPL - $236\n\n",
+        "BUENOS AIRES DE REGALO\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• 03 noches de alojamiento en el hotel seleccionado con desayuno e impuestos incluidos. \n• Traslados Aeropuerto/Hotel/Aeropuerto en servicio Semi-privado. \n• Excursión de medio día City tour en servicio regular (regreso al hotel por cuenta propia).  \n• Tour de Compras en fábricas de cuero, ropa, etc. (Cortesía) \n• Cortesía: Casino Puerto Madero: Entrada y traslado gratis brindado por el Casino para mayores de 18 años. \n• Cortesía: 10% de descuento por consumo a la carta en el Restaurant Puerto Cristal en Puerto Madero. \n• Seguro de viaje ASSIST CARD por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\n• Iva e Impuestos.\nDESDE\n$244 - DBL\n$236 – TPL\n\n",
         "BUENOS AIRES + IGUAZÚ + MONTEVIDEO\n9 DÍAS / 8 NOCHES\nPROGRAMA INCLUYE:\n• 02 noches de alojamiento en Buenos Aires con desayuno.\n• Half Day City Tour en servicio regular.\n• Cena Show La Ventana.\n• Traslados en servicio privado.\n• Ticket de barco directo desde Buenos Aires hasta Montevideo en clase turista.\n• 02 noches de alojamiento en Puerto Iguazú con desayuno.\n• Cataratas Argentinas con entradas.\n• Cataratas Brasileras con entradas.\n• Traslados en servicio regular.\n• 01 noche de alojamiento en Buenos Aires con desayuno.\n• Traslados en servicio privado.\n• 02 noches de alojamiento en Montevideo con desayuno.\n• Half Day City tour.\n• Traslados en servicio Privado.\n• Ticket de barco directo desde Montevideo hasta Buenos Aires en clase turista\n• 01 noche de alojamiento en Buenos Aires con desayuno.\n• Traslados en servicio privado. \n• Seguro de asistencia Assist Card x 9 días (sólo aplica para ecuatorianos. Suplemento en seguro para mayores de 70 años)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\n$2,226 – DBL\n$1810 – TPL"
       ]
     },
@@ -505,11 +477,13 @@
         "informacion Caribe",
         "ofertas Caribe",
         "viajes al Caribe",
+        "tienes algo",
         "Caribe"
       ],
       "responses": [
-        "BARCELÓ ARUBA\n4 DÍAS / 3 NOCHES\nLand Tour\nPROGRAMA INCLUYE:\n• Traslado aeropuerto AUA – Hotel – aeropuerto AUA en servicio compartido.\n• 03 noches de Alojamiento en el hotel BARCELÓ ARUBA\n• Régimen Todo incluido\n• Habitación Deluxe Room\n• Wi-fi gratis en todo el hotel\n• Participación en actividades y entretenimiento del hotel\n• Seguro de asistencia Assist Card x 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\nSGL: $1822\nDBL: $1472\nTPL: $1379",
-        "BRICKELL BAY BEACH RESORT ARUBA SÓLO ADULTOS.\n4 DÍAS / 3 NOCHES\nIncluye:\n• 03 noches de alojamiento en el Hotel Brickell Bay Beach Resort Aruba, Trademark by Wyndham.\n• Desayunos Diarios.\n• Traslado Aeropuerto AUA – Hotel - Traslado Aeropuerto AUA en servicio compartido.\n• Habitación Premium.\n• Seguro de asistencia Assist Card x 4 días (sólo aplica para pasajeros ecuatoriano. Suplemento en seguro para mayores de 70 años)\n• Impuesto ambiental.\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\nSGL: $765\nDBL: $402",
+        "Perfecto! Tengo los siguiente paquetes:\n\n",
+        "BARCELÓ ARUBA\n4 DÍAS / 3 NOCHES\nLand Tour\nPROGRAMA INCLUYE:\n• Traslado aeropuerto AUA – Hotel – aeropuerto AUA en servicio compartido.\n• 03 noches de Alojamiento en el hotel BARCELÓ ARUBA\n• Régimen Todo incluido\n• Habitación Deluxe Room\n• Wi-fi gratis en todo el hotel\n• Participación en actividades y entretenimiento del hotel\n• Seguro de asistencia Assist Card x 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\nSGL: $1822\nDBL: $1472\nTPL: $1379\n\n",
+        "BRICKELL BAY BEACH RESORT ARUBA SÓLO ADULTOS.\n4 DÍAS / 3 NOCHES\nIncluye:\n• 03 noches de alojamiento en el Hotel Brickell Bay Beach Resort Aruba, Trademark by Wyndham.\n• Desayunos Diarios.\n• Traslado Aeropuerto AUA – Hotel - Traslado Aeropuerto AUA en servicio compartido.\n• Habitación Premium.\n• Seguro de asistencia Assist Card x 4 días (sólo aplica para pasajeros ecuatoriano. Suplemento en seguro para mayores de 70 años)\n• Impuesto ambiental.\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\nSGL: $765\nDBL: $402\n\n",
         "EAGLE ARUBA RESORT\n4 DÍAS / 3 NOCHES\nIncluye:\n• 03 noches de alojamiento en el Hotel Eagle Aruba Resort.\n• Traslado Aeropuerto AUA – Hotel – Traslado Aeropuerto AUA en servicio compartido.\n• Habitación Suite Premium de un dormitorio.\n• Seguro de asistencia Assist Card x 4 días (sólo aplica para pasajeros ecuatoriano. Suplemento en seguro para mayores de 70 años).\nImpuestos Hoteleros.\n• IVA e impuestos de Ecuador.\n• CORTESÍA: \n• $25 dólares de crédito en comida y bebida consumida por habitación (no por pasajero).\n• Wi – Fi.\n• Sillas y sombrilla de playa y piscinas.\n• Estacionamiento.\n• Acceso al gimnasio.\n• Acceso a las canchas de Tennis de playa.\nDESDE\nSGL: $824 \nDBL: $449\nTPL:$358\n**PROMOCIÓN: Cuarta persona se hospeda GRATIS, se debe adicionar los traslados + seguros de viajes y si quiere incluir plan de comida debe pagar. Por favor ver la tarifa en la tabla de precios."
       ]
     },
@@ -519,9 +493,11 @@
         "informacion Bahamas",
         "ofertas Bahamas",
         "viajes a Bahamas",
+        "tienes algo",
         "Bahamas"
       ],
       "responses": [
+        "Perfecto! Tengo los siguiente paquetes:\n\n",
         "RIU PALACE PARADISE ISLAND\nSólo Adultos\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• Traslado aeropuerto NAS – Hotel – aeropuerto NAS en servicio compartido.\n• 03 noches de Alojamiento en el hotel RIU PALACE PARADISE ISLAND\n• Sistema de alimentación todo incluido\n• Habitación Junior Suite Vista Mar Parcial \n• Participación en actividades y entretenimiento del hotel\t\n• Seguro de asistencia Assist Card por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\n• Impuestos Hoteleros \n• IVA e impuestos de Ecuador\nDESDE\nSGL: $1222\nDBL: $866\nTPL: $828"
       ]
     },
@@ -531,22 +507,26 @@
         "informacion Cuba",
         "ofertas Cuba",
         "viajes a Cuba",
+        "tienes algo",
         "Cuba"
       ],
       "responses": [
+        "Perfecto! Tengo los siguiente paquetes:\n\n",
         "HABANA Y VARADERO\n5 DÍAS / 4 NOCHES\nPROGRAMA INCLUYE: \n• Traslado en bus compartido, Aeropuerto La Habana – Hotel\n• Dos noches Hotel en La Habana con desayuno incluido\n• Excursión “Mi Habana Colonial” en bus compartido:\n• 4 horas de excursión, bus compartido, no incluye almuerzo.\nRecogida en el hotel, vehículo climatizado y guía. Recorrido panorámico Malecón. Recorrido a pie por el Centro Histórico de la Habana Vieja Patrimonio de La Humanidad, Plaza San Francisco de Asís, Plaza Vieja, Plaza de La Catedral, Plaza de Armas. En el trayecto hacia el Capitolio, se observan el Museo de la Revolución, el Museo de Bellas Artes, Parque Central y el Gran Teatro de la Habana. Recorrido con vista panorámica de la Universidad de La Habana y parada en la Plaza de la Revolución con tiempo para fotos. Retorno a los hoteles.\n• Traslado en bus compartido La Habana – Hotel en Varadero\n• Dos noches Hotel en Varadero servicio Todo Incluido\n(Desayunos, almuerzos y cenas tipo buffet, más snacks / Bebidas Soft y Alcohólicas ilimitadas / Restaurantes Especializados / Piscinas / Club Infantil y de niños / Servicio de toallas de playa / Actividades diarias / Entretenimiento nocturno con variados espectáculos)\n• Traslado en bus compartido Varadero – Aeropuerto La Habana \n• Asistencia 24 horas de la Agencia/\n• Seguro de asistencia Assist Card x 5 días (sólo aplica para pasajeros ecuatorianos. Suplemento para mayores de 70 años)\n• Asistencia 24 horas\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\nSGL: $428\nDBL: $336\nTPL:$333"
       ]
     },
     {
-      "tag": "Peru",
+      "tag": "Perú",
       "patterns": [
         "informacion Peru",
         "ofertas Peru",
         "viajes a Peru",
+        "tienes algo",
         "Peru"
       ],
       "responses": [
-        "LIMA EXPRESS\n3 DÍAS / 2 NOCHES\nPROGRAMA INCLUYE:\n• Traslado aeropuerto LIM – Hotel – aeropuerto LIM \n• 02 noches de Alojamiento en LIMA\n• Desayunos diarios\n• Tour de medio día: Visita a la Ciudad convencional o Tour Express en bicicleta (tour a elegir)\n• Transporte, entradas y guiado en servicio regular (español o inglés)\n• Seguro de asistencia Assist Card x 3 días (sólo aplica para pasajeros ecuatorianos. Suplemento para mayores de 70 años)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nSGL: $378\nDBL: $245\nTPL: $234",
+        "Perfecto! Tengo los siguiente paquetes:\n\n",
+        "LIMA EXPRESS\n3 DÍAS / 2 NOCHES\nPROGRAMA INCLUYE:\n• Traslado aeropuerto LIM – Hotel – aeropuerto LIM \n• 02 noches de Alojamiento en LIMA\n• Desayunos diarios\n• Tour de medio día: Visita a la Ciudad convencional o Tour Express en bicicleta (tour a elegir)\n• Transporte, entradas y guiado en servicio regular (español o inglés)\n• Seguro de asistencia Assist Card x 3 días (sólo aplica para pasajeros ecuatorianos. Suplemento para mayores de 70 años)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nSGL: $378\nDBL: $245\nTPL: $234\n\n",
         "CUZCO AIRES ANDINOS\n4 DÍAS / 3 NOCHES\nIncluye:\n• Traslados aeropuerto/hotel/aeropuerto en Cusco. \n• 2 noches de alojamiento en Cusco (2 desayunos).\n• 1 noche de alojamiento en Valle Sagrado (1 desayuno).\n• Visita a la ciudad de Cusco & Parque Arqueológico de Sacsayhuamán.\n• Tour Día Completo - Valle Sagrado de los Incas (almuerzo incluido).\n• Tour Día Completo - Machu Picchu en servicio de tren categoría estándar (almuerzo incluido).\n• Transporte, entradas y guiado en servicio regular (español o inglés).\n• Seguro de asistencia Assist Card x 4 días (sólo aplica para pasajeros ecuatorianos. Suplemento para mayores de 70 años)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nSGL: $917\nDBL: $744\nTPL: $713"
       ]
     }
