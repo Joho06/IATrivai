@@ -275,6 +275,16 @@
       ]
     },
     {
+      "tag": "incluye",
+      "patterns": [
+        "que incluye",
+        "incluye"
+      ],
+      "responses": [
+        "Todas las actividades que se incluyen están dentro del mismo paquete."
+      ]
+    },
+    {
       "tag": "No_incluye",
       "patterns": [
         "no incluye"
@@ -412,7 +422,10 @@
         "ofertas Colombia",
         "viajes a Colombia",
         "tienes algo",
-        "Colombia"
+        "Colombia",
+        "Cartagena",
+        "Medellin",
+        "Bogotá"
       ],
       "responses": [
         "Perfecto! Tengo los siguiente paquetes:\n\n",
@@ -446,7 +459,9 @@
         "ofertas Brasil",
         "viajes a Brasil",
         "tienes algo",
-        "Brasil"
+        "Brasil",
+        "Sao Paulo",
+        "Iguazú"
       ],
       "responses": [
         "Perfecto! Tengo los siguiente paquetes:\n\n",
@@ -462,7 +477,9 @@
         "ofertas Argentina",
         "viajes a Argentina",
         "tienes algo",
-        "Argentina"
+        "Argentina",
+        "Bariloche",
+        "Buenos Aires"
       ],
       "responses": [
         "Perfecto! Tengo los siguiente paquetes:\n\n",
@@ -478,7 +495,10 @@
         "ofertas Caribe",
         "viajes al Caribe",
         "tienes algo",
-        "Caribe"
+        "Caribe",
+        "Barcelo Aruba",
+        "Brickell",
+        "Eagle Aruba"
       ],
       "responses": [
         "Perfecto! Tengo los siguiente paquetes:\n\n",
@@ -494,7 +514,8 @@
         "ofertas Bahamas",
         "viajes a Bahamas",
         "tienes algo",
-        "Bahamas"
+        "Bahamas",
+        "Riu Palace"
       ],
       "responses": [
         "Perfecto! Tengo los siguiente paquetes:\n\n",
@@ -508,7 +529,8 @@
         "ofertas Cuba",
         "viajes a Cuba",
         "tienes algo",
-        "Cuba"
+        "Cuba",
+        "Habana"
       ],
       "responses": [
         "Perfecto! Tengo los siguiente paquetes:\n\n",
@@ -522,7 +544,9 @@
         "ofertas Peru",
         "viajes a Peru",
         "tienes algo",
-        "Peru"
+        "Peru",
+        "Lima",
+        "Cuzco"
       ],
       "responses": [
         "Perfecto! Tengo los siguiente paquetes:\n\n",
