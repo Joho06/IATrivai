@@ -151,7 +151,7 @@ def chatbot_response(message, user_id):
             # y luego devuelve un mensaje apropiado
             confirm_message = "Para poder ayudarte necesitamos saber la siguiente información:"
             resultado = "¡Gracias! La información ha sido guardada."
-            return confirm_message, confirmation_questions, resultado
+            return confirm_message, confirm_message, resultado
             
     return respuesta
 
