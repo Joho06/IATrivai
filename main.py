@@ -1,4 +1,4 @@
-from flask import Flask, request, Response ,jsonify
+from flask import Flask, request, Response ,jsonify, send_file, send_from_directory
 import json
 import random
 import pickle
@@ -124,7 +124,7 @@ def chatbot_response(message, user_id):
         return "Lo siento, no entendí tu pregunta."
     
     # Verifica si el mensaje contiene nombres de países mencionados
-    mentioned_countries = ["Panamá", "Colombia", "Argentina", "Brasil", "Caribe", "Bahamas", "Cuba", "Peru"]  
+    mentioned_countries = ["Panama", "Galapagos", "Cartagena"]  
     countries_mentioned = [country for country in mentioned_countries if country.lower() in message.lower()]
     
     if countries_mentioned:
@@ -208,19 +208,49 @@ def chat_route():
             if respuestas_pais:
                 return jsonify({"respuestas": respuestas_pais})
             else:
-                
                 respuesta = chatbot_response(mensaje_recibido, user_id)
                 if isinstance(respuesta, tuple):
                     # Si la respuesta es una tupla, significa que es el mensaje de confirmación y la información del viaje
                     confirm_message, confirmation_questions = respuesta
                     return jsonify({"confirmacion": confirm_message, "preguntas_confirmacion": confirmation_questions})
-                else:
-                    # Si no es una tupla, es la respuesta del chatbot
-                    return jsonify({"respuesta": respuesta})
+                if 'Brasil' in respuesta:
+                    respuesta = add_hotel_image(respuesta)
+                     # Si no es una tupla, es la respuesta del chatbot
+                return jsonify({"respuesta": respuesta})
     else:
         respuesta = "No se proporcionó un mensaje válido."
 
     return jsonify({"respuesta": respuesta})
+@app.route('/img/<path:filename>')
+def static_files(filename):
+    # Asegúrate de que el directorio de imágenes sea correcto
+    image_directory = "img"
+
+    try:
+        # Intenta abrir la imagen
+        return send_file(f"{image_directory}/{filename}", mimetype='image/png')
+    except Exception as e:
+        # Si hay algún error, devuelve un mensaje de error
+        return str(e)
+
+def add_hotel_image(response):
+    # Definir una lista de imágenes de hoteles
+    hotel_images = [
+        "img1.png",
+        "img2.png",
+    ]
+    
+    # Si el bot responde con la etiqueta "Brasil", elige una imagen de hotel al azar y devuelve la respuesta con la imagen
+    if 'Brasil' in response:
+        hotel_image = random.choice(hotel_images)
+        image_url = f"/img/{hotel_image}"
+        response_with_image = f"{response} <img src='{image_url}' alt='Hotel Image'>"
+        return response_with_image
+    return response
+    
+    # Si no se encuentra la etiqueta "Brasil", devolver la respuesta original sin imagen
+
+
 
 @app.route("/audio", methods=["POST"])
 def audioText():

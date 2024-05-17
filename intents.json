@@ -258,7 +258,7 @@
         "quiero información"
       ],
       "responses": [
-        "Por supuesto, puedo proporcionarte información detallada sobre cualquier destino que te interese.\n Tenemos los siguientes lugares para visitar:\nColombia\nPanama\nPerù\nCaribe\nBahamas\nBrasil\nArgentina\nCuba\nCual lugar te interesaria o quisieras informacion"
+        "Por supuesto, puedo proporcionarte información detallada sobre cualquier destino que te interese.\n Tenemos los siguientes lugares para visitar:\nCartagena\nPanamá\nGalapagos\n\nCual lugar te interesaria o quisieras informacion"
       ]
     },
     {
@@ -287,10 +287,17 @@
     {
       "tag": "No_incluye",
       "patterns": [
-        "no incluye"
+        "que no incluye",
+        "informacion sobre exclusiones",
+        "exclusiones del paquete",
+        "no incluye el viaje",
+        "detalles no incluidos",
+        "notas importantes del viaje",
+        "notas y exclusiones"
       ],
       "responses": [
-        "NOTAS IMPORTANTES:\nNO INCLUYE BOLETOS AÉREOS\nTARIFAS COMISIONABLES AL 10% DE LA BASE COMISIONABLE\n* TARIFAS NO GARANTIZADAS SIN RESERVA CON PAGO, SUJETAS A CAMBIOS SIN PREVIO AVISO *\nPara reservar: hasta paro de ventas.\nPara viajar: hasta 15/DIC/24\nPrecios sujetos a cambio sin previo aviso.\nReservas sujetas a disponibilidad del hotel\nSuplemento para traslados nocturnos.\nSuplemento para pasajero viajando solo.\nEs indispensable validar disponibilidad de alojamiento, antes de realizar la venta del paquete para garantizar que sea la misma tarifa, ya que de lo contrario no será posible mantenerla.\nLos niños son considerados hasta los 10 años, en adelante pagan tarifa de acomodación triple.\nTarifas sujetas a cambios sin previo aviso, dependiendo disponibilidad de alojamiento, fechas de temporada, y/o eventos de ciudad.\nFechas en las que aplica suplementos:  en junio, julio, primera y segunda semana de octubre y de noviembre. Por favor consultar."
+        "",
+        "NO INCLUYE (aplicable a todos los paquetes promocionales):\n\n• Actividades no detalladas en el programa.\n• Extras personales en hoteles y restaurantes.\n• Propinas.\n• Tarjeta de asistencia médica.\n\nNOTAS IMPORTANTES:\n\n• ***Tarifa Promocional Sujeta A Disponibilidad, Cambios Y Condiciones***\n• Reserva Aérea Saliendo Desde Guayaquil O Quito Aplica En Clase \"L” En Toda La Ruta.\n• Tarifa Aerea Incluye Únicamente Equipaje De Mano\n• Favor Verificar Tarifa Aérea Antes De Confirmar Su Reserva.\n• Periodo De Compra: Inmediato\n• Periodo De Viaje: Desde 19 Ago 24 / Hasta 15 Oct 24\n• Política De Menores: Tarifa Chd Aplica De 2 A 10 Años Acompañados De 2 Adultos. Máximo 2 Niños Por Habitación.\n• Check In En Hotel On Vacation Blue Cove: 17h00 / Check Out Hotel: 13h00\n• *Desayunos, Almuerzos Y Cenas Sujetos A Horarios Establecidos Por El Hotel.\n• *Green House Restobar, Consumo Con Costo Adicional\n• Habitaciones Triples Cuentan Únicamente Con 2 Camas.\n• Recepción En El Aeropuerto Y Traslado Al Hotel Seleccionado No Incluye Propina A Maleteros.\n• Traslados En Vuelos Nocturnos Aplican Suplemento (Entre Las 21h00 Y 06h00), Favor Consultar.\n• En Caso De Retraso En El Vuelo De Llegada, El Tiempo De Espera Genera Cargo Adicional.\n• Cada Pasajero Tiene Derecho A Una (1) Pieza De Equipaje Y Una (1) Pieza De Mano, En Caso De Ser Necesaria La Contratación De Un Transporte Adicional Para Transportar El Equipaje Extra; El Costo De Este Correrá Por Cuenta Del Pasajero. No Se Admiten Cajas Ni Elementos Deportivos Como Equipaje.\n• Toda Reserva Cancelada Genera Penalidades.\n• Tarifas Sujetas A Black Out. Temporada De Festividades Y Feriados Puede Aplicar Suplementos, Favor Consultar.\n"
       ]
     },
     {
@@ -406,7 +413,7 @@
       "tag": "tiempo_reserva",
       "patterns": [
         "listo gracias",
-        "ayudeme",
+        "ayudeme con ",
         "quiero este paquete",
         "podria reservar este",
         "estoy interesado"
@@ -416,142 +423,52 @@
       ]
     },
     {
-      "tag": "Colombia",
+      "tag": "Cartagena",
       "patterns": [
-        "informacion Colombia",
-        "ofertas Colombia",
-        "viajes a Colombia",
-        "tienes algo",
-        "Colombia",
+        "informacion Cartagena",
+        "ofertas Cartagena",
+        "viajes a Cartagena",
+        "tienes algo de Cartagena",
         "Cartagena",
-        "Medellin",
-        "Bogotá"
+        "Colombia",
+        "vacaciones en Cartagena"
       ],
       "responses": [
-        "Perfecto! Tengo los siguiente paquetes:\n\n",
-        "CARTAGENA 3 NOCHES Ticket aéreo Guayaquil o Quito / Cartagena / Quito o Guayaquil Vía avianca\n\nINCLUYE:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 03 noches de alojamiento en HOTEL ZALMEDINA\n• Desayunos diarios\n• Cortesía:\n- City tour + Visita al Castillo de San Felipe con entrada.\n- Chip + bolsa de café por habitación\n• Impuestos hoteleros y aéreos\n$447\n\n",
-        "CARTAGENA 3 NOCHES TODO INLUIDO Ticket aéreo Guayaquil o Quito / Cartagena / Quito o Guayaquil Vía avianca\n\nINCLUYE:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 03 noches de alojamiento en HOTEL CARTAGENA PLAZA\n• Desayuno, almuerzo y cena tipo buffet\n• Snacks y bar abierto\n• Piscina panorámica\n• Bar & discoteca\n• Noches temáticas y shows de baile\n• Kids & teen clubs\n• Wifi gratuito en las instalaciones\n• CORTESÍAS:\n- City tour + Castillo de San Felipe con entrada\n- Chip celular y bolsa de café por habitación\n$565\n\n",
-        "CARTAGENA! ALL INCLUSIVE 04 NOCHES Ticket aéreo QUITO - GUAYAQUIL / CARTAGENA / GUAYAQUIL - QUITO\n\nINCLUYE:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 04 noches de alojamiento en HOTEL CARTAGENA PLAZA\n• Desayuno, almuerzo y cena tipo buffet\n• Snacks y bar abierto\n• Piscina panorámica\n• Bar & discoteca\n• Noches temáticas y shows de baile\n• Kids & teen clubs\n• Wifi gratuito en las instalaciones\n$829\n\n",
-        "CARTAGENA BÁSICO\n4 DÍAS / 3 NOCHES\nIncluye:\n• 03 noches de alojamiento de acuerdo con el hotel elegido.\n• Desayunos diarios.\n• Traslados in/out – Servicio privado en horario diurno. (Sin guía acompañante)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\n$217 DBL\n$192 TPL\n\n",
-        "MEDELLÍN BÁSICO\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• Traslado aeropuerto MDE – Hotel – aeropuerto MDE en servicio privado en horario diurno. (sin guía acompañante)\n• 03 noches de Alojamiento en hotel seleccionado\n• Desayunos Diarios\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\n$192 DBL\n$184 TPL\n\n",
-        "BOGOTÁ “CIUDAD DE CULTURA Y ARQUITECTURA”\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• 03 noches de alojamiento de acuerdo con el hotel seleccionado + desayuno incluido\n• Traslado in / out en servicio privado sin guía acompañante – aplica para horarios diurnos\n• Visita a la ciudad y sus lugares más emblemáticos con ascenso al cerro de Monserrate y entrada a Museo de Oro.\n• Visita a la catedral de sal en Zipaquirá\n• IVA e impuestos de Ecuador\nDESDE\n$386 DBL\n$349 TPL"
+        "CARTAGENA, 03 NOCHES, SOLO DESAYUNOS\n\nTicket aéreo Guayaquil o Quito / Cartagena / Quito o Guayaquil Vía COPA Airlines\n\nINCLUYE:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 03 noches de alojamiento en HOTEL ZALMEDINA\n• Desayunos diarios\n• Cortesía:\n- City tour + Visita al Castillo de San Felipe con entrada.\n- Chip + bolsa de café por habitación\n• Impuestos hoteleros y aéreos\n• IVA de Mayorista\n\nDESDE GYE\n\nPRECIO POR PERSONA\n\nDESC EFECTIVO\n\nSGL: $613\nDBL: $471\nTPL: $445\nCHD: $415\n\nTARIFA REGULAR\n\nSGL: $659\nDBL: $507\nTPL: $479\nCHD: $446\n\nPERIODO DE VIAJE\nDESDE 17 JUN 24 - HASTA 25 AGO 24\n\nDESDE UIO\n\nPRECIO POR PERSONA\n\nDSCTO. EN EFECTIVO\n\nSGL: $636\nDBL: $496\nTPL: $475\nCHD: $440\n\nTARIFA REGULAR\n\nSGL: $660\nDBL: $509\nTPL: $489\nCHD: $441\n\nPERIODO DE VIAJE\nDESDE 17 JUN 24 - HASTA 25 AGO 24\n\n"
       ]
     },
     {
-      "tag": "Panamá",
+      "tag": "Galapagos",
       "patterns": [
-        "informacion Panamá",
-        "ofertas Panamá",
-        "viajes a Panamá",
-        "tienes algo",
-        "Panamá"
+        "informacion Galapagos Santa Cruz",
+        "ofertas Galapagos Santa Cruz",
+        "viajes a Galapagos Santa Cruz",
+        "tienes algo de Galapagos Santa Cruz",
+        "Galapagos Santa Cruz",
+        "Santa Cruz",
+        "Galapagos"
       ],
       "responses": [
-        "Perfecto! Tengo los siguiente paquetes:\n\n",
-        "PANAMA CIUDAD Y PLAYA BLANCA\n6 DÍAS / 5 NOCHES\nPROGRAMA INCLUYE:\nTraslados aeropuerto PTY  hotel playa   hotel ciudad   aeropuerto en PTY en servicio compartido y en horario diurno.PANAMÁ CIUDAD:\n• 02 noches de Alojamiento en hotel The Executive u Hotel Hampton by Hilton + 01 noche GRATIS\n• Habitación Estándar.\n• Desayunos diarios\n• Día Completo - City Tour + Canal (sin entrada) + Compras (martes, jueves, sábado y domingo)\n• Día Completo- Full Day Zona Libre (sólo aplica lunes, miércoles y viernes)\n\nPANAMÁ PLAYA:\n• 02 noches de alojamiento en Hotel Playa Blanca\n• Habitación Garden View\n• Sistema de alimentación Todo Incluido.\n• Desayunos diarios\n• Impuestos Hoteleros \n• IVA en impuestos de Ecuador\n$432 DBL / $399 TPL\n\n",
-        "PANAMÁ DE COMPRAS\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• Traslados aeropuerto – hotel – aeropuerto en PTY en servicio compartido en horario diurno.\n• 02 noches de Alojamiento en hotel según elección + 01 noche GRATIS\n• Full Day City Tour + Canal (sin entradas) + Compras (martes, jueves, sábado y domingo)\n• CORTESÍA: Full Day Zona Libre (lunes, miércoles y viernes)\n• Desayunos diarios\n• Impuestos Hoteleros \n• IVA en impuestos de Ecuador\nHOTEL HOSPEDIUM PRINCESS\n$156 DBL\n$148 TPL"
+        "Perfecto! Tengo los siguientes paquetes:\n\n",
+        "GALÁPAGOS - SANTA CRUZ 2024\n4 Días – 3 noches\nSALIDAS DESDE GYE O UIO\n\nDESDE\n27 de Junio - 30 de Diciembre\n\nINCLUYE:\n\n• Boleto aéreo vía Latam/Avianca UIO/GYE – GPS – GYE/UIO con maleta de 23 kg.\n• Transporte terrestre y marítimo.\n• Alojamiento en hotel a su elección.\n• 3 desayunos, 3 almuerzos y 3 cenas en restaurantes en localidad.\n• Excursiones terrestres y marítimas.\n• Asistencia en el aeropuerto.\n• Snorkeling (en tours navegables).\n• Guías autorizados por el Parque Nacional Galápagos (obligatorio en cada excursión).\n\nNO INCLUYE:\n\n• Tarjeta de turismo INGALA USD30.\n• Traslado Ecogal (Baltra) USD5 por pax por vía.\n• Entrada al Parque Nacional Galápagos USD6 nacionales / USD50 Comunidad Andina / USD100 Extranjeros, niños pagan el 50% del valor correspondiente.\n• Tasa uso de muelle en Isabela USD5 nacionales / USD10 extranjeros.\n• Otros servicios no especificados en el programa.\n\n",
+        "SANTA CRUZ BASICO\nBRISAS DEL PACIFICO O SIMILAR $615 | DESCUENTO EN EFECTIVO $565\nGPS ISLANDS O SIMILAR $633 | DESCUENTO EN EFECTIVO $582\n\nACTIVIDADES\nDÍA 1: ATO IN + Estación Científica Charles Darwin.\nDÍA 2: Playa Tortuga Bay + Parte Alta.\nDÍA 3: Playa los alemanes + Grietas.\nDÍA 4: ATO OUT.\n\n",
+        "STA CRUZ + TOUR DE BAHIA\nBRISAS DEL PACIFICO O SIMILAR: $680 | DESCUENTO EN EFECTIVO: $625\nGPS ISLANDS O SIMILAR: $731 | DESCUENTO EN EFECTIVO: $672\n\nACTIVIDADES\nDÍA 1: ATO IN + Estación Científica Charles Darwin.\nDÍA 2: Playa Tortuga Bay - Parte Alta.\nDÍA 3: Tour de Bahía.\nDÍA 4: ATO OUT.\n\n",
+        "CONDICIONES GENERALES:\n\n• Tarifa solo está vigente para reservas pagadas hasta el DIC/2024.\n• Fechas resaltadas en amarillo tienen un suplemento de $50 por pax.\n• Boletos aéreos se enviarán un día antes a la fecha de salida seleccionada por pax.\n• Tarifas por persona en base a habitación doble/triple.\n• Suplemento pasajero en habitación sencilla, consultar.\n• Infantes menores de 24 meses (2 años) tienen el valor de USD150, incluye solo boleto aéreo. Programas con full day, consultar tarifa.\n• Itinerario sujeto a cambios por problemas climatológicos, inconvenientes de tipo operativo o situaciones que pongan en peligro la integridad del pasajero o la conservación de las Islas. Como también por indicaciones de autoridades que administran el Parque Nacional Galápagos.\n• Itinerario de actividades puede variar de acuerdo a orden de hospedaje de pasajeros en islas. Se confirmará el orden de visita en el Destino.\n• Reservas sujetas a disponibilidad; en caso de no encontrar con el hotel ofertado, se procederá a confirmar otros hoteles de la misma categoría.\n• Precios y disponibilidad sujeta a cambios sin previo aviso.\n• *Full day a Santa Fe no opera todos los días, solicitar disponibilidad antes de confirmar.\n"
       ]
     },
     {
-      "tag": "Brasil",
+      "tag": "Panama",
       "patterns": [
-        "informacion Brasil",
-        "ofertas Brasil",
-        "viajes a Brasil",
-        "tienes algo",
-        "Brasil",
-        "Sao Paulo",
-        "Iguazú"
+        "informacion Panama San Andres",
+        "ofertas Panama San Andres",
+        "viajes a Panama y San Andres",
+        "tienes algo de Panama y San Andres",
+        "Panama y San Andres",
+        "Panamá",
+        "San Andres"
       ],
       "responses": [
-        "Perfecto! Tengo los siguiente paquetes:\n\n",
-        "SAO PAULO\n4 DÍAS / 3 NOCHES\nLand Tour\nPROGRAMA INCLUYE:\nTraslado aeropuerto GRU – hotel SAO – aeropuerto GRU en servicio privado.\n03 noches de alojamiento en hotel seleccionado con desayunos diarios incluidos\nHalf Day City Tour - servicio privado.\nSeguro de viaje ASSIST CARD por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\nImpuestos hoteleros\nIVA mayorista y de agencias\nDESDE\nSGL – $821\nDBL - $453",
-        "IGUAZÚ INOLVIDABLE\n4 DÍAS / 3 NOCHES\nLand Tour\nPROGRAMA INCLUYE:\nTraslado aeropuerto IGU/IGR – hotel – aeropuerto IGU/IGR en servicio compartido.\n03 noches de alojamiento en hotel seleccionado con desayunos diarios incluidos\n• Tour Cataratas Argentina (entrada incluida)\n• Tour Cataratas Brasil (entrada incluida)\n• Dutty Free Lado Argentina\n• Hito de las 3 Fronteras Brasil (sin entradas)\n• Parada en Parque de Aves (entrada incluida)\nSeguro de viaje ASSIST CARD por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\nImpuestos hoteleros\nIVA mayorista y de agencias\nDESDE\nDBL- $419\nTPL - $390\n\n",
-        "IGUAZÚ INOLVIDABLE\n4 DÍAS / 3 NOCHES\nLand Tour\nPROGRAMA INCLUYE:\nTraslado aeropuerto IGU/IGR – hotel – aeropuerto IGU/IGR en servicio compartido.\n03 noches de alojamiento en hotel seleccionado con desayunos diarios incluidos\n• Tour Cataratas Argentina (entrada incluida)\n• Tour Cataratas Brasil (entrada incluida)\n• Dutty Free Lado Argentina\n• Hito de las 3 Fronteras Brasil (sin entradas)\n• Parada en Parque de Aves (entrada incluida)\nSeguro de viaje ASSIST CARD por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\nImpuestos hoteleros\nIVA mayorista y de agencias\nDESDE\nDBL - $1018 \nTPL - $931"
-      ]
-    },
-    {
-      "tag": "Argentina",
-      "patterns": [
-        "informacion Argentina",
-        "ofertas Argentina",
-        "viajes a Argentina",
-        "tienes algo",
-        "Argentina",
-        "Bariloche",
-        "Buenos Aires"
-      ],
-      "responses": [
-        "Perfecto! Tengo los siguiente paquetes:\n\n",
-        "BARILOCHE CLÁSICO\n3 DÍAS / 2 NOCHES\nPROGRAMA INCLUYE:\n• 02 noches de alojamiento en el hotel seleccionado.\n• Desayunos diarios.\n• Excursión Circuito Chico en servicio regular.\n• Traslado Apto – Hotel – Apto en servicio regular.\n• Seguro de asistencia Assist Card x 3 días (sólo aplica para ecuatorianos. Suplemento en seguro para mayores de 70 años)\n• Impuestos Hoteleros\nIVA e impuestos de Ecuador\nDESDE\nSGL – $257 - DBL/TPL - $236\n\n",
-        "BUENOS AIRES DE REGALO\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• 03 noches de alojamiento en el hotel seleccionado con desayuno e impuestos incluidos. \n• Traslados Aeropuerto/Hotel/Aeropuerto en servicio Semi-privado. \n• Excursión de medio día City tour en servicio regular (regreso al hotel por cuenta propia).  \n• Tour de Compras en fábricas de cuero, ropa, etc. (Cortesía) \n• Cortesía: Casino Puerto Madero: Entrada y traslado gratis brindado por el Casino para mayores de 18 años. \n• Cortesía: 10% de descuento por consumo a la carta en el Restaurant Puerto Cristal en Puerto Madero. \n• Seguro de viaje ASSIST CARD por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\n• Iva e Impuestos.\nDESDE\n$244 - DBL\n$236 – TPL\n\n",
-        "BUENOS AIRES + IGUAZÚ + MONTEVIDEO\n9 DÍAS / 8 NOCHES\nPROGRAMA INCLUYE:\n• 02 noches de alojamiento en Buenos Aires con desayuno.\n• Half Day City Tour en servicio regular.\n• Cena Show La Ventana.\n• Traslados en servicio privado.\n• Ticket de barco directo desde Buenos Aires hasta Montevideo en clase turista.\n• 02 noches de alojamiento en Puerto Iguazú con desayuno.\n• Cataratas Argentinas con entradas.\n• Cataratas Brasileras con entradas.\n• Traslados en servicio regular.\n• 01 noche de alojamiento en Buenos Aires con desayuno.\n• Traslados en servicio privado.\n• 02 noches de alojamiento en Montevideo con desayuno.\n• Half Day City tour.\n• Traslados en servicio Privado.\n• Ticket de barco directo desde Montevideo hasta Buenos Aires en clase turista\n• 01 noche de alojamiento en Buenos Aires con desayuno.\n• Traslados en servicio privado. \n• Seguro de asistencia Assist Card x 9 días (sólo aplica para ecuatorianos. Suplemento en seguro para mayores de 70 años)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\n$2,226 – DBL\n$1810 – TPL"
-      ]
-    },
-    {
-      "tag": "Caribe",
-      "patterns": [
-        "informacion Caribe",
-        "ofertas Caribe",
-        "viajes al Caribe",
-        "tienes algo",
-        "Caribe",
-        "Barcelo Aruba",
-        "Brickell",
-        "Eagle Aruba"
-      ],
-      "responses": [
-        "Perfecto! Tengo los siguiente paquetes:\n\n",
-        "BARCELÓ ARUBA\n4 DÍAS / 3 NOCHES\nLand Tour\nPROGRAMA INCLUYE:\n• Traslado aeropuerto AUA – Hotel – aeropuerto AUA en servicio compartido.\n• 03 noches de Alojamiento en el hotel BARCELÓ ARUBA\n• Régimen Todo incluido\n• Habitación Deluxe Room\n• Wi-fi gratis en todo el hotel\n• Participación en actividades y entretenimiento del hotel\n• Seguro de asistencia Assist Card x 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\nSGL: $1822\nDBL: $1472\nTPL: $1379\n\n",
-        "BRICKELL BAY BEACH RESORT ARUBA SÓLO ADULTOS.\n4 DÍAS / 3 NOCHES\nIncluye:\n• 03 noches de alojamiento en el Hotel Brickell Bay Beach Resort Aruba, Trademark by Wyndham.\n• Desayunos Diarios.\n• Traslado Aeropuerto AUA – Hotel - Traslado Aeropuerto AUA en servicio compartido.\n• Habitación Premium.\n• Seguro de asistencia Assist Card x 4 días (sólo aplica para pasajeros ecuatoriano. Suplemento en seguro para mayores de 70 años)\n• Impuesto ambiental.\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\nSGL: $765\nDBL: $402\n\n",
-        "EAGLE ARUBA RESORT\n4 DÍAS / 3 NOCHES\nIncluye:\n• 03 noches de alojamiento en el Hotel Eagle Aruba Resort.\n• Traslado Aeropuerto AUA – Hotel – Traslado Aeropuerto AUA en servicio compartido.\n• Habitación Suite Premium de un dormitorio.\n• Seguro de asistencia Assist Card x 4 días (sólo aplica para pasajeros ecuatoriano. Suplemento en seguro para mayores de 70 años).\nImpuestos Hoteleros.\n• IVA e impuestos de Ecuador.\n• CORTESÍA: \n• $25 dólares de crédito en comida y bebida consumida por habitación (no por pasajero).\n• Wi – Fi.\n• Sillas y sombrilla de playa y piscinas.\n• Estacionamiento.\n• Acceso al gimnasio.\n• Acceso a las canchas de Tennis de playa.\nDESDE\nSGL: $824 \nDBL: $449\nTPL:$358\n**PROMOCIÓN: Cuarta persona se hospeda GRATIS, se debe adicionar los traslados + seguros de viajes y si quiere incluir plan de comida debe pagar. Por favor ver la tarifa en la tabla de precios."
-      ]
-    },
-    {
-      "tag": "Bahamas",
-      "patterns": [
-        "informacion Bahamas",
-        "ofertas Bahamas",
-        "viajes a Bahamas",
-        "tienes algo",
-        "Bahamas",
-        "Riu Palace"
-      ],
-      "responses": [
-        "Perfecto! Tengo los siguiente paquetes:\n\n",
-        "RIU PALACE PARADISE ISLAND\nSólo Adultos\n4 DÍAS / 3 NOCHES\nPROGRAMA INCLUYE:\n• Traslado aeropuerto NAS – Hotel – aeropuerto NAS en servicio compartido.\n• 03 noches de Alojamiento en el hotel RIU PALACE PARADISE ISLAND\n• Sistema de alimentación todo incluido\n• Habitación Junior Suite Vista Mar Parcial \n• Participación en actividades y entretenimiento del hotel\t\n• Seguro de asistencia Assist Card por 4 días (sólo aplica para ecuatorianos. Suplemento para mayores de 70 años)\n• Impuestos Hoteleros \n• IVA e impuestos de Ecuador\nDESDE\nSGL: $1222\nDBL: $866\nTPL: $828"
-      ]
-    },
-    {
-      "tag": "Cuba",
-      "patterns": [
-        "informacion Cuba",
-        "ofertas Cuba",
-        "viajes a Cuba",
-        "tienes algo",
-        "Cuba",
-        "Habana"
-      ],
-      "responses": [
-        "Perfecto! Tengo los siguiente paquetes:\n\n",
-        "HABANA Y VARADERO\n5 DÍAS / 4 NOCHES\nPROGRAMA INCLUYE: \n• Traslado en bus compartido, Aeropuerto La Habana – Hotel\n• Dos noches Hotel en La Habana con desayuno incluido\n• Excursión “Mi Habana Colonial” en bus compartido:\n• 4 horas de excursión, bus compartido, no incluye almuerzo.\nRecogida en el hotel, vehículo climatizado y guía. Recorrido panorámico Malecón. Recorrido a pie por el Centro Histórico de la Habana Vieja Patrimonio de La Humanidad, Plaza San Francisco de Asís, Plaza Vieja, Plaza de La Catedral, Plaza de Armas. En el trayecto hacia el Capitolio, se observan el Museo de la Revolución, el Museo de Bellas Artes, Parque Central y el Gran Teatro de la Habana. Recorrido con vista panorámica de la Universidad de La Habana y parada en la Plaza de la Revolución con tiempo para fotos. Retorno a los hoteles.\n• Traslado en bus compartido La Habana – Hotel en Varadero\n• Dos noches Hotel en Varadero servicio Todo Incluido\n(Desayunos, almuerzos y cenas tipo buffet, más snacks / Bebidas Soft y Alcohólicas ilimitadas / Restaurantes Especializados / Piscinas / Club Infantil y de niños / Servicio de toallas de playa / Actividades diarias / Entretenimiento nocturno con variados espectáculos)\n• Traslado en bus compartido Varadero – Aeropuerto La Habana \n• Asistencia 24 horas de la Agencia/\n• Seguro de asistencia Assist Card x 5 días (sólo aplica para pasajeros ecuatorianos. Suplemento para mayores de 70 años)\n• Asistencia 24 horas\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nDESDE\nSGL: $428\nDBL: $336\nTPL:$333"
-      ]
-    },
-    {
-      "tag": "Perú",
-      "patterns": [
-        "informacion Peru",
-        "ofertas Peru",
-        "viajes a Peru",
-        "tienes algo",
-        "Peru",
-        "Lima",
-        "Cuzco"
-      ],
-      "responses": [
-        "Perfecto! Tengo los siguiente paquetes:\n\n",
-        "LIMA EXPRESS\n3 DÍAS / 2 NOCHES\nPROGRAMA INCLUYE:\n• Traslado aeropuerto LIM – Hotel – aeropuerto LIM \n• 02 noches de Alojamiento en LIMA\n• Desayunos diarios\n• Tour de medio día: Visita a la Ciudad convencional o Tour Express en bicicleta (tour a elegir)\n• Transporte, entradas y guiado en servicio regular (español o inglés)\n• Seguro de asistencia Assist Card x 3 días (sólo aplica para pasajeros ecuatorianos. Suplemento para mayores de 70 años)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nSGL: $378\nDBL: $245\nTPL: $234\n\n",
-        "CUZCO AIRES ANDINOS\n4 DÍAS / 3 NOCHES\nIncluye:\n• Traslados aeropuerto/hotel/aeropuerto en Cusco. \n• 2 noches de alojamiento en Cusco (2 desayunos).\n• 1 noche de alojamiento en Valle Sagrado (1 desayuno).\n• Visita a la ciudad de Cusco & Parque Arqueológico de Sacsayhuamán.\n• Tour Día Completo - Valle Sagrado de los Incas (almuerzo incluido).\n• Tour Día Completo - Machu Picchu en servicio de tren categoría estándar (almuerzo incluido).\n• Transporte, entradas y guiado en servicio regular (español o inglés).\n• Seguro de asistencia Assist Card x 4 días (sólo aplica para pasajeros ecuatorianos. Suplemento para mayores de 70 años)\n• Impuestos Hoteleros\n• IVA e impuestos de Ecuador\nSGL: $917\nDBL: $744\nTPL: $713"
+        "¡PANAMÁ + SAN ANDRÉS!, 06 NOCHES\n\nTicket aéreo Quito o Guayaquil / Panamá / San Andrés / Quito o Guayaquil VÍA COPA AIRLINES\n\nINCLUYE:\n\nEN PANAMÁ:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 02 noches de alojamiento en HOTEL HAMPTON BY HILTON + 01 noche gratis\n• Desayunos diarios incluidos\n• Wifi\n• Full day city tour + canal (sin entrada) + compras + zona libre\n\nEN SAN ANDRÉS:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 03 noches de alojamiento en HOTEL ON VACATION BLUE COVE\n• Desayunos, almuerzos y cenas diarios\n• Restaurantes\n• Mini market\n• Bar\n• 03 Jacuzzi\n• Green house restobar\n• Impuestos hoteleros y aéreos\n• IVA de Mayorista\n\nDESDE UIO O GYE\n\nPRECIO POR PERSONA\n\nDSCTO. EN EFECTIVO\n\nSGL: $998\nDBL: $794\nTPL: $745\nCHD: $701\n\nTARIFA REGULAR\n\nSGL $1073\nDBL $854\nTPL $801\nCHD: $753\n\nPERIODO DE VIAJE\nDESDE 19 AGO 24 - HASTA 15 OCT 24\n\n"
       ]
     }
   ]
