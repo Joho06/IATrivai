@@ -156,19 +156,6 @@
       ]
     },
     {
-      "tag": "comida_restaurantes",
-      "patterns": [
-        "¿Cuáles son los platos típicos de ?",
-        "¿Puedes recomendarme un buen restaurante en ?",
-        "Estoy interesado en probar la gastronomía local en ."
-      ],
-      "responses": [
-        "Algunos platos típicos de  incluyen .",
-        "Te recomendamos el restaurante  en . Es conocido por su excelente cocina local.",
-        "La gastronomía en  es diversa y deliciosa. ¿Tienes alguna preferencia alimentaria?"
-      ]
-    },
-    {
       "tag": "comida",
       "patterns": [
         "¿Qué opciones de comida hay en cierto destino?",
@@ -262,19 +249,6 @@
       ]
     },
     {
-      "tag": "confirmacion",
-      "patterns": [
-        "Sí",
-        "sí, por favor",
-        "Claro"
-      ],
-      "responses": [
-        "Entendido",
-        "¡Perfecto!",
-        "Procesando la solicitud..."
-      ]
-    },
-    {
       "tag": "incluye",
       "patterns": [
         "que incluye",
@@ -296,7 +270,6 @@
         "notas y exclusiones"
       ],
       "responses": [
-        "",
         "NO INCLUYE (aplicable a todos los paquetes promocionales):\n\n• Actividades no detalladas en el programa.\n• Extras personales en hoteles y restaurantes.\n• Propinas.\n• Tarjeta de asistencia médica.\n\nNOTAS IMPORTANTES:\n\n• ***Tarifa Promocional Sujeta A Disponibilidad, Cambios Y Condiciones***\n• Reserva Aérea Saliendo Desde Guayaquil O Quito Aplica En Clase \"L” En Toda La Ruta.\n• Tarifa Aerea Incluye Únicamente Equipaje De Mano\n• Favor Verificar Tarifa Aérea Antes De Confirmar Su Reserva.\n• Periodo De Compra: Inmediato\n• Periodo De Viaje: Desde 19 Ago 24 / Hasta 15 Oct 24\n• Política De Menores: Tarifa Chd Aplica De 2 A 10 Años Acompañados De 2 Adultos. Máximo 2 Niños Por Habitación.\n• Check In En Hotel On Vacation Blue Cove: 17h00 / Check Out Hotel: 13h00\n• *Desayunos, Almuerzos Y Cenas Sujetos A Horarios Establecidos Por El Hotel.\n• *Green House Restobar, Consumo Con Costo Adicional\n• Habitaciones Triples Cuentan Únicamente Con 2 Camas.\n• Recepción En El Aeropuerto Y Traslado Al Hotel Seleccionado No Incluye Propina A Maleteros.\n• Traslados En Vuelos Nocturnos Aplican Suplemento (Entre Las 21h00 Y 06h00), Favor Consultar.\n• En Caso De Retraso En El Vuelo De Llegada, El Tiempo De Espera Genera Cargo Adicional.\n• Cada Pasajero Tiene Derecho A Una (1) Pieza De Equipaje Y Una (1) Pieza De Mano, En Caso De Ser Necesaria La Contratación De Un Transporte Adicional Para Transportar El Equipaje Extra; El Costo De Este Correrá Por Cuenta Del Pasajero. No Se Admiten Cajas Ni Elementos Deportivos Como Equipaje.\n• Toda Reserva Cancelada Genera Penalidades.\n• Tarifas Sujetas A Black Out. Temporada De Festividades Y Feriados Puede Aplicar Suplementos, Favor Consultar.\n"
       ]
     },
@@ -361,7 +334,7 @@
         "informacion de pago"
       ],
       "responses": [
-        "Claro! Para completar tu reserva, te ofrecemos varias opciones de pago:\n Puedes realizar una transferencia bancaria,\nPagos con tarjeta de crédito o utilizar otras plataformas de pago en línea.\nTambien contamoscon pagos en efectivo.\n Por favor, avísanos cuál prefieres y te proporcionaremos los detalles necesarios para proceder."
+        "Para completar tu reserva, te ofrecemos varias opciones de pago:\nPuedes realizar una transferencia bancaria.\nPagos con tarjeta de crédito, debito o utilizar otras plataformas de pago en línea.\nTambien contamoscon pagos en efectivo.\n Por favor, avísanos cuál prefieres y te proporcionaremos los detalles necesarios para proceder."
       ]
     },
     {
@@ -370,11 +343,10 @@
         "pago con tarjeta",
         "pagar con tarjeta de credito",
         "tarjeta de crédito",
-        "pagar",
         "crédito"
       ],
       "responses": [
-        "Claro para procesar el pago con tarjeta de crédito, necesitamos la siguiente información:\nNúmero de la tarjeta de crédito: \nFecha de vencimiento: \nCódigo de seguridad (CVV/CVC): \nNombre del titular de la tarjeta: \nDirección de facturación:"
+        "Claro para procesar el pago con tarjeta de crédito, por favor utiliza el siguiente enlace de pago seguro:"
       ]
     },
     {
@@ -385,7 +357,7 @@
         "debito"
       ],
       "responses": [
-        "Claro para procesar el pago con tarjeta de debito, necesitamos la siguiente información:\nNúmero de la tarjeta de debito: \nFecha de vencimiento: \nCódigo de seguridad (CVV/CVC): \nNombre del titular de la tarjeta: \nDirección de facturación:"
+        "Claro para procesar el pago con tarjeta de débito, por favor utiliza el siguiente enlace de pago seguro:"
       ]
     },
     {
@@ -425,51 +397,68 @@
     {
       "tag": "Cartagena",
       "patterns": [
-        "informacion Cartagena",
-        "ofertas Cartagena",
-        "viajes a Cartagena",
-        "tienes algo de Cartagena",
-        "Cartagena",
-        "Colombia",
-        "vacaciones en Cartagena"
+          "Quiero información sobre Cartagena",
+          "Deseo saber más sobre Cartagena",
+          "Háblame sobre Cartagena",
+          "Información de Cartagena",
+          "¿Qué tienes sobre Cartagena?",
+          "Ofertas de viajes a Cartagena",
+          "Paquetes de Cartagena",
+          "Vacaciones en Cartagena",
+          "Viajes a Cartagena",
+          "Cartagena",
+          "Si, quiero informacion",
+          "deseo saber mas",
+          "Colombia"
       ],
       "responses": [
-        "CARTAGENA, 03 NOCHES, SOLO DESAYUNOS\n\nTicket aéreo Guayaquil o Quito / Cartagena / Quito o Guayaquil Vía COPA Airlines\n\nINCLUYE:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 03 noches de alojamiento en HOTEL ZALMEDINA\n• Desayunos diarios\n• Cortesía:\n- City tour + Visita al Castillo de San Felipe con entrada.\n- Chip + bolsa de café por habitación\n• Impuestos hoteleros y aéreos\n• IVA de Mayorista\n\nDESDE GYE\n\nPRECIO POR PERSONA\n\nDESC EFECTIVO\n\nSGL: $613\nDBL: $471\nTPL: $445\nCHD: $415\n\nTARIFA REGULAR\n\nSGL: $659\nDBL: $507\nTPL: $479\nCHD: $446\n\nPERIODO DE VIAJE\nDESDE 17 JUN 24 - HASTA 25 AGO 24\n\nDESDE UIO\n\nPRECIO POR PERSONA\n\nDSCTO. EN EFECTIVO\n\nSGL: $636\nDBL: $496\nTPL: $475\nCHD: $440\n\nTARIFA REGULAR\n\nSGL: $660\nDBL: $509\nTPL: $489\nCHD: $441\n\nPERIODO DE VIAJE\nDESDE 17 JUN 24 - HASTA 25 AGO 24\n\n"
+          "CARTAGENA, 03 NOCHES, SOLO DESAYUNOS\n\nTicket aéreo Guayaquil o Quito / Cartagena / Quito o Guayaquil Vía COPA Airlines\n\nINCLUYE:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 03 noches de alojamiento en HOTEL ZALMEDINA\n• Desayunos diarios\n• Cortesía:\n- City tour + Visita al Castillo de San Felipe con entrada.\n- Chip + bolsa de café por habitación\n• Impuestos hoteleros y aéreos\n• IVA de Mayorista\n\nDESDE GYE\n\nPRECIO POR PERSONA\n\nDESC EFECTIVO\n\nTARIFA REGULAR\n\nDBL: $471\n\nPERIODO DE VIAJE\nDESDE 17 JUN 24 - HASTA 25 AGO 24\n\nDESDE UIO\n\nPRECIO POR PERSONA\n\nDSCTO. EN EFECTIVO\n\nTARIFA REGULAR\n\nDBL: $475\n\nPERIODO DE VIAJE\nDESDE 17 JUN 24 - HASTA 25 AGO 24\n\n"
       ]
-    },
-    {
+  },
+  {
       "tag": "Galapagos",
       "patterns": [
-        "informacion Galapagos Santa Cruz",
-        "ofertas Galapagos Santa Cruz",
-        "viajes a Galapagos Santa Cruz",
-        "tienes algo de Galapagos Santa Cruz",
-        "Galapagos Santa Cruz",
-        "Santa Cruz",
-        "Galapagos"
+          "Quiero información sobre Galápagos",
+          "Deseo saber más sobre Galápagos",
+          "Háblame sobre Galápagos",
+          "Información de Galápagos",
+          "¿Qué tienes sobre Galápagos?",
+          "Ofertas de viajes a Galápagos",
+          "Paquetes de Galápagos",
+          "Vacaciones en Galápagos",
+          "Viajes a Galápagos",
+          "Si, quiero informacion",
+          "deseo saber mas",
+          "Galápagos",
+          "Santa Cruz"
       ],
       "responses": [
-        "Perfecto! Tengo los siguientes paquetes:\n\n",
-        "GALÁPAGOS - SANTA CRUZ 2024\n4 Días – 3 noches\nSALIDAS DESDE GYE O UIO\n\nDESDE\n27 de Junio - 30 de Diciembre\n\nINCLUYE:\n\n• Boleto aéreo vía Latam/Avianca UIO/GYE – GPS – GYE/UIO con maleta de 23 kg.\n• Transporte terrestre y marítimo.\n• Alojamiento en hotel a su elección.\n• 3 desayunos, 3 almuerzos y 3 cenas en restaurantes en localidad.\n• Excursiones terrestres y marítimas.\n• Asistencia en el aeropuerto.\n• Snorkeling (en tours navegables).\n• Guías autorizados por el Parque Nacional Galápagos (obligatorio en cada excursión).\n\nNO INCLUYE:\n\n• Tarjeta de turismo INGALA USD30.\n• Traslado Ecogal (Baltra) USD5 por pax por vía.\n• Entrada al Parque Nacional Galápagos USD6 nacionales / USD50 Comunidad Andina / USD100 Extranjeros, niños pagan el 50% del valor correspondiente.\n• Tasa uso de muelle en Isabela USD5 nacionales / USD10 extranjeros.\n• Otros servicios no especificados en el programa.\n\n",
-        "SANTA CRUZ BASICO\nBRISAS DEL PACIFICO O SIMILAR $615 | DESCUENTO EN EFECTIVO $565\nGPS ISLANDS O SIMILAR $633 | DESCUENTO EN EFECTIVO $582\n\nACTIVIDADES\nDÍA 1: ATO IN + Estación Científica Charles Darwin.\nDÍA 2: Playa Tortuga Bay + Parte Alta.\nDÍA 3: Playa los alemanes + Grietas.\nDÍA 4: ATO OUT.\n\n",
-        "STA CRUZ + TOUR DE BAHIA\nBRISAS DEL PACIFICO O SIMILAR: $680 | DESCUENTO EN EFECTIVO: $625\nGPS ISLANDS O SIMILAR: $731 | DESCUENTO EN EFECTIVO: $672\n\nACTIVIDADES\nDÍA 1: ATO IN + Estación Científica Charles Darwin.\nDÍA 2: Playa Tortuga Bay - Parte Alta.\nDÍA 3: Tour de Bahía.\nDÍA 4: ATO OUT.\n\n",
-        "CONDICIONES GENERALES:\n\n• Tarifa solo está vigente para reservas pagadas hasta el DIC/2024.\n• Fechas resaltadas en amarillo tienen un suplemento de $50 por pax.\n• Boletos aéreos se enviarán un día antes a la fecha de salida seleccionada por pax.\n• Tarifas por persona en base a habitación doble/triple.\n• Suplemento pasajero en habitación sencilla, consultar.\n• Infantes menores de 24 meses (2 años) tienen el valor de USD150, incluye solo boleto aéreo. Programas con full day, consultar tarifa.\n• Itinerario sujeto a cambios por problemas climatológicos, inconvenientes de tipo operativo o situaciones que pongan en peligro la integridad del pasajero o la conservación de las Islas. Como también por indicaciones de autoridades que administran el Parque Nacional Galápagos.\n• Itinerario de actividades puede variar de acuerdo a orden de hospedaje de pasajeros en islas. Se confirmará el orden de visita en el Destino.\n• Reservas sujetas a disponibilidad; en caso de no encontrar con el hotel ofertado, se procederá a confirmar otros hoteles de la misma categoría.\n• Precios y disponibilidad sujeta a cambios sin previo aviso.\n• *Full day a Santa Fe no opera todos los días, solicitar disponibilidad antes de confirmar.\n"
+          "Perfecto! Tengo los siguientes paquetes:\n\nGALÁPAGOS - SANTA CRUZ 2024\n4 Días – 3 noches\nSALIDAS DESDE GYE O UIO\n\nDESDE\n27 de Junio - 30 de Diciembre\n\nINCLUYE:\n\n• Boleto aéreo vía Latam/Avianca UIO/GYE – GPS – GYE/UIO con maleta de 23 kg.\n• Transporte terrestre y marítimo.\n• Alojamiento en hotel a su elección.\n• 3 desayunos, 3 almuerzos y 3 cenas en restaurantes en localidad.\n• Excursiones terrestres y marítimas.\n• Asistencia en el aeropuerto.\n• Snorkeling (en tours navegables).\n• Guías autorizados por el Parque Nacional Galápagos (obligatorio en cada excursión).\n\nNO INCLUYE:\n\n• Tarjeta de turismo INGALA USD30.\n• Traslado Ecogal (Baltra) USD5 por pax por vía.\n• Entrada al Parque Nacional Galápagos USD6 nacionales / USD50 Comunidad Andina / USD100 Extranjeros, niños pagan el 50% del valor correspondiente.\n• Tasa uso de muelle en Isabela USD5 nacionales / USD10 extranjeros.\n• Otros servicios no especificados en el programa.\n\n",
+          "SANTA CRUZ BASICO\nBRISAS DEL PACIFICO O SIMILAR $615 | DESCUENTO EN EFECTIVO $565\nGPS ISLANDS O SIMILAR $633 | DESCUENTO EN EFECTIVO $582\n\nACTIVIDADES\nDÍA 1: ATO IN + Estación Científica Charles Darwin.\nDÍA 2: Playa Tortuga Bay + Parte Alta.\nDÍA 3: Playa los alemanes + Grietas.\nDÍA 4: ATO OUT.\n\n",
+          "STA CRUZ + TOUR DE BAHIA\nBRISAS DEL PACIFICO O SIMILAR: $680 | DESCUENTO EN EFECTIVO: $625\nGPS ISLANDS O SIMILAR: $731 | DESCUENTO EN EFECTIVO: $672\n\nACTIVIDADES\nDÍA 1: ATO IN + Estación Científica Charles Darwin.\nDÍA 2: Playa Tortuga Bay - Parte Alta.\nDÍA 3: Tour de Bahía.\nDÍA 4: ATO OUT.\n\n",
+          "CONDICIONES GENERALES:\n\n• Tarifa solo está vigente para reservas pagadas hasta el DIC/2024.\n• Fechas resaltadas en amarillo tienen un suplemento de $50 por pax.\n• Boletos aéreos se enviarán un día antes a la fecha de salida seleccionada por pax.\n• Tarifas por persona en base a habitación doble/triple.\n• Suplemento pasajero en habitación sencilla, consultar.\n• Infantes menores de 24 meses (2 años) tienen el valor de USD150, incluye solo boleto aéreo. Programas con full day, consultar tarifa.\n• Itinerario sujeto a cambios por problemas climatológicos, inconvenientes de tipo operativo o situaciones que pongan en peligro la integridad del pasajero o la conservación de las Islas. Como también por indicaciones de autoridades que administran el Parque Nacional Galápagos.\n• Itinerario de actividades puede variar de acuerdo a orden de hospedaje de pasajeros en islas. Se confirmará el orden de visita en el Destino.\n• Reservas sujetas a disponibilidad; en caso de no encontrar con el hotel ofertado, se procederá a confirmar otros hoteles de la misma categoría.\n• Precios y disponibilidad sujeta a cambios sin previo aviso.\n• *Full day a Santa Fe no opera todos los días, solicitar disponibilidad antes de confirmar.\n"
       ]
-    },
-    {
-      "tag": "Panama",
+  },
+  {
+      "tag": "Panamá",
       "patterns": [
-        "informacion Panama San Andres",
-        "ofertas Panama San Andres",
-        "viajes a Panama y San Andres",
-        "tienes algo de Panama y San Andres",
-        "Panama y San Andres",
-        "Panamá",
-        "San Andres"
+          "Quiero información sobre Panamá",
+          "Deseo saber más sobre Panamá",
+          "Háblame sobre Panamá",
+          "Información de Panamá",
+          "¿Qué tienes sobre Panamá?",
+          "Ofertas de viajes a Panamá",
+          "Paquetes de Panamá",
+          "Vacaciones en Panamá",
+          "Viajes a Panamá",
+          "Si, quiero informacion",
+          "deseo saber mas",
+          "Panamá",
+          "San Andrés"
       ],
       "responses": [
-        "¡PANAMÁ + SAN ANDRÉS!, 06 NOCHES\n\nTicket aéreo Quito o Guayaquil / Panamá / San Andrés / Quito o Guayaquil VÍA COPA AIRLINES\n\nINCLUYE:\n\nEN PANAMÁ:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 02 noches de alojamiento en HOTEL HAMPTON BY HILTON + 01 noche gratis\n• Desayunos diarios incluidos\n• Wifi\n• Full day city tour + canal (sin entrada) + compras + zona libre\n\nEN SAN ANDRÉS:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 03 noches de alojamiento en HOTEL ON VACATION BLUE COVE\n• Desayunos, almuerzos y cenas diarios\n• Restaurantes\n• Mini market\n• Bar\n• 03 Jacuzzi\n• Green house restobar\n• Impuestos hoteleros y aéreos\n• IVA de Mayorista\n\nDESDE UIO O GYE\n\nPRECIO POR PERSONA\n\nDSCTO. EN EFECTIVO\n\nSGL: $998\nDBL: $794\nTPL: $745\nCHD: $701\n\nTARIFA REGULAR\n\nSGL $1073\nDBL $854\nTPL $801\nCHD: $753\n\nPERIODO DE VIAJE\nDESDE 19 AGO 24 - HASTA 15 OCT 24\n\n"
+          "¡PANAMÁ + SAN ANDRÉS!, 06 NOCHES\n\nTicket aéreo Quito o Guayaquil / Panamá / San Andrés / Quito o Guayaquil VÍA COPA AIRLINES\n\nINCLUYE:\n\nEN PANAMÁ:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 02 noches de alojamiento en HOTEL HAMPTON BY HILTON + 01 noche gratis\n• Desayunos diarios incluidos\n• Wifi\n• Full day city tour + canal (sin entrada) + compras + zona libre\n\nEN SAN ANDRÉS:\n\n• Traslado aeropuerto / hotel / aeropuerto en servicio compartido\n• 03 noches de alojamiento en HOTEL ON VACATION BLUE COVE\n• Desayunos, almuerzos y cenas diarios\n• Restaurantes\n• Mini market\n• Bar\n• 03 Jacuzzi\n• Green house restobar\n• Impuestos hoteleros y aéreos\n• IVA de Mayorista\n\nDESDE UIO O GYE\n\nPRECIO POR PERSONA\n\nDSCTO. EN EFECTIVO\n\nSGL: $998\nDBL: $794\nTPL: $745\nCHD: $701\n\nTARIFA REGULAR\n\nSGL $1073\nDBL $854\nTPL $801\nCHD: $753\n\nPERIODO DE VIAJE\nDESDE 19 AGO 24 - HASTA 15 OCT 24\n\n"
       ]
-    }
+  }
   ]
 }

@@ -17,23 +17,21 @@ from googletrans import Translator
 
 app = Flask(__name__)
 nlp = spacy.load('es_core_news_sm')
-# Initialize WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 confirming = False
 user_name = ''
-
-    
-# Load intents data from JSON file
+user_city = ''
+pending_payment = False
+     
+# Cargar datos de intenciones desde un archivo JSON y modelos
 with open('intents.json', 'r', encoding='utf-8') as file:
     intents = json.load(file)
 
-# Load preprocessed data and model
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('IntellichatModel.h5')
-
-# Inicializar traductor
 translator = Translator()
+
 
 # Functions for chatbot functionality
 # Definir una función para manejar la confirmación de viaje
@@ -70,7 +68,7 @@ translator = Translator()
 #     with open(filename, 'w') as json_file:
 #         json.dump(data, json_file, indent=4)
 
-
+#Limpieza de oraciones
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
@@ -85,7 +83,7 @@ def bow(sentence, words, show_details=True):
                 bag[i] = 1
                 if show_details:
                     print("found in bag: %s" % word)
-    # Ensure that the bag of words has the correct length (142)
+    # Asegúrese de que la bolsa de palabras tenga la longitud correcta (142))
     bag = bag[:100000]
     return np.array(bag)
 
@@ -111,22 +109,83 @@ def get_response(ints, intents):
                 return result
     return "Lo siento, no puedo responder esa pregunta en este momento."
 
+def generar_link_pago(ciudad, zona=None):
+    enlaces_pago = {
+        'cartagena': 'https://payp.page.link/D1cbL',
+        'panama': 'https://payp.page.link/kkqBA',
+        'galapagos_santaCruz': 'https://payp.page.link/Y5boM',
+        'galapagos_Bahia_santaCruz': 'https://payp.page.link/hC7sj',
+        'default':'Claro!'
+    }
+    if ciudad.lower() == 'galapagos':
+        if zona:
+            if zona.lower() == 'santa cruz':
+                return enlaces_pago['galapagos_santaCruz']
+            elif zona.lower() == 'bahia':
+                return enlaces_pago['galapagos_Bahia_santaCruz']
+            else:
+                return 'Lo siento, no tengo un enlace de pago para esa zona específica de Galápagos.'
+        else:
+            return '¿Podrías especificar si es para Santa Cruz o Bahía en Galápagos?'
+    return enlaces_pago.get(ciudad.lower(), enlaces_pago['default'])
+
+def extract_name(text):
+    if not any(char.isupper() for char in text):
+        return None
+    # Lista de posibles patrones para identificar el nombre
+    patterns = ['mi nombre es', 'me llamo', 'me dicen']
+    text_lower = text.lower()
+    # Buscar cada patrón en el texto
+    for pattern in patterns:
+        if pattern in text_lower:
+            # Dividir el texto en partes y tomar la última parte como el nombre
+            parts = text_lower.split(pattern)
+            if len(parts) > 1:
+                name = parts[-1].strip()
+                return name.capitalize() if name else None
+    return None
 
 def chatbot_response(message, user_id):
-    global user_name
-    global confirmation_info
-    # Verifica si el user_name ya está establecido y usa ese valor para personalizar el mensaje
+    global user_name, user_city, confirmation_info
+
+    # Personalizar el mensaje si el nombre de usuario ya está establecido
     if user_name:
         message = f"{user_name}, {message}"
-    
-    # Agrega una verificación para asegurarte de que el mensaje sea suficientemente largo y compuesto de caracteres alfanuméricos
+
+    # Verificar si el mensaje es suficientemente largo y alfanumérico
     if len(message) < 3 or not any(char.isalnum() for char in message):
         return "Lo siento, no entendí tu pregunta."
-    
-    # Verifica si el mensaje contiene nombres de países mencionados
-    mentioned_countries = ["Panama", "Galapagos", "Cartagena"]  
+
+    # Clasificar la intención del mensaje
+    ints = predict_class(message)
+    tag = ints[0]['intent']
+
+    mentioned_countries = ["Panama", "Galapagos", "Cartagena"]
     countries_mentioned = [country for country in mentioned_countries if country.lower() in message.lower()]
+
+    if tag == "saludo":
+        return {"mensaje": "¡Hola! Bienvenido a Trivai. ¿Puedes ayudarme con tu nombre?"}
+
     
+    if tag == "forma_pago" or tag == "credito" or tag == "debito":
+        if pending_payment and user_city.lower() == 'galapagos':
+            enlace_pago = generar_link_pago('galapagos', message)
+            pending_payment = False
+            return {
+                "mensaje": f"Utiliza el siguiente enlace para realizar el pago: {enlace_pago}"
+            }
+        elif user_city.lower() == 'galapagos':
+            pending_payment = True
+            return {
+                "mensaje": "¿Podrías especificar si es para Santa Cruz o Bahía en Galápagos?"
+            }
+        else:
+            enlace_pago = generar_link_pago(countries_mentioned[0] if countries_mentioned else 'default')
+            respuesta = get_response(ints, intents)
+            return {
+                "mensaje": f"{respuesta} \nEnlace de pago: {enlace_pago}"
+            }
+
     if countries_mentioned:
         # Si hay países mencionados, procesa el mensaje en consecuencia
         respuestas_pais = []
@@ -139,88 +198,54 @@ def chatbot_response(message, user_id):
                         respuestas_pais.append(response)
                 respuestas_pais.extend(intent.get('responses', []))
                 
-        respuesta = ' '.join(respuestas_pais) if respuestas_pais else "Lo siento, no tengo información sobre esos países."
-    else:
-        # Si no hay países mencionados, procesa el mensaje como de costumbre
-        ints = predict_class(message)
-        respuesta = get_response(ints, intents)
-        if respuesta is None:
-            respuesta = "Lo siento, no puedo responder esa pregunta en este momento."
-        elif ints[0]["intent"] == "confirmacion":
-            # Si la intención es confirmación, llama a la función para manejar la confirmación
-            # y luego devuelve un mensaje apropiado
-            confirm_message = "Para poder ayudarte necesitamos saber la siguiente información:"
-            resultado = "¡Gracias! La información ha sido guardada."
-            return confirm_message, confirm_message, resultado
-            
+        respuesta = ' '.join(respuestas_pais) if respuestas_pais else "Lo siento, no tengo información sobre esos paquetes."
+
+    if countries_mentioned and (not user_city or countries_mentioned[0].lower() != user_city.lower()):
+        user_city = countries_mentioned[0]  # Almacenar la nueva ciudad mencionada
+        if user_name:
+            return f"¡Hola {user_name}! Vi que estás interesado en {user_city}. ¿Te gustaría más información sobre el paquete?"
+        else:
+            return f"¡Hola! Vi que estás interesado en {user_city}. ¿Te gustaría más información sobre el paquete?"
+
+    respuesta = get_response(ints, intents)
+    if not respuesta:
+        respuesta = "Lo siento, no puedo responder esa pregunta en este momento."
+
     return respuesta
-
-def extract_name(text):
-    if not any(char.isupper() for char in text):
-        return None
-    # Lista de posibles patrones para identificar el nombre
-    patterns = ['mi nombre es', 'me llamo', 'me dicen']
-    
-    text_lower = text.lower()
-    # Buscar cada patrón en el texto
-    for pattern in patterns:
-        if pattern in text_lower:
-            # Dividir el texto en partes y tomar la última parte como el nombre
-            parts = text_lower.split(pattern)
-            if len(parts) > 1:
-                name = parts[-1].strip()
-                return name.capitalize() if name else None
-    
-    return None
-
 
 # Routes
 @app.route('/chat', methods=['POST'])
 def chat_route():
-    global user_name  # Declarar user_name como global para modificar la variable global dentro de la función
+    global user_name, user_city
+
     data = request.json
-    # Establecer user_id en None inicialmente
-    user_id = None
+    user_id = data.get('user_id', None)  # Extraer user_id si está disponible, de lo contrario, None
 
-    if 'mensaje' in data:
-        mensaje_recibido = data['mensaje']
-        nombre = extract_name(mensaje_recibido)  # Movido aquí
-        # Revisar si 'user_id' está presente en los datos recibidos
-        if 'user_id' in data:
-            user_id = data['user_id'] 
-        # Manejar el caso donde 'user_id' no está presente en data
-        else:
-            # Puedes asignar un valor predeterminado o devolver un mensaje de error
-            user_id = None  
-        # Verificar si el mensaje contiene una solicitud para establecer un nombre
-        nombre = extract_name(mensaje_recibido)  
-        if nombre:
-            user_id = nombre
-           
-            respuesta = f"¡Bienvenido, {nombre}! ¿En qué puedo ayudarte hoy?"
-        else:
-            respuestas_pais = []
-            for intent in intents.get('intents', []):
-                if intent['tag'] == data.get('tag', ''):
-                    for pattern in intent['patterns']:
-                        if pattern.lower() in mensaje_recibido.lower():
-                            respuestas_pais.extend(intent.get('responses', []))
-            if respuestas_pais:
-                return jsonify({"respuestas": respuestas_pais})
-            else:
-                respuesta = chatbot_response(mensaje_recibido, user_id)
-                if isinstance(respuesta, tuple):
-                    # Si la respuesta es una tupla, significa que es el mensaje de confirmación y la información del viaje
-                    confirm_message, confirmation_questions = respuesta
-                    return jsonify({"confirmacion": confirm_message, "preguntas_confirmacion": confirmation_questions})
-                if 'Brasil' in respuesta:
-                    respuesta = add_hotel_image(respuesta)
-                     # Si no es una tupla, es la respuesta del chatbot
-                return jsonify({"respuesta": respuesta})
-    else:
-        respuesta = "No se proporcionó un mensaje válido."
+    if 'mensaje' not in data:
+        return jsonify({"respuesta": "No se proporcionó un mensaje válido."})
 
+    mensaje_recibido = data['mensaje']
+    mentioned_countries = ["Panama", "Galapagos", "Cartagena"]
+    countries_mentioned = [country for country in mentioned_countries if country.lower() in mensaje_recibido.lower()]
+
+    if not user_name:
+        extracted_name = extract_name(mensaje_recibido)
+        if extracted_name:
+            user_name = extracted_name
+            if countries_mentioned and (not user_city or countries_mentioned[0].lower() != user_city.lower()):
+                user_city = countries_mentioned[0]
+                return jsonify({"respuesta": f"¡Hola {user_name}! Vi que estás interesado en {user_city}. ¿Te gustaría más información sobre el paquete?"})
+            return jsonify({"respuesta": f"¡Hola {user_name}! ¿En qué puedo ayudarte hoy?"})
+        else:
+            if countries_mentioned:
+                return jsonify({"respuesta": f"¡Hola! Vi que estás interesado en {countries_mentioned}. ¿Puedes decirme tu nombre para continuar?"})
+            return jsonify({"respuesta": "¡Hola! Bienvenido a Trivai. ¿Puedes ayudarme con tu nombre?"})
+
+    respuesta = chatbot_response(mensaje_recibido, user_id)
     return jsonify({"respuesta": respuesta})
+
+
+    
 @app.route('/img/<path:filename>')
 def static_files(filename):
     # Asegúrate de que el directorio de imágenes sea correcto
